@@ -1,0 +1,104 @@
+
+
+
+Solve the following problem using an explicit shortest-path search.
+
+1) Restate the problem as a shortest-path task.
+- Initial state: value = 0
+- Goal state: value = 17
+- Allowed actions:
+  +1 (cost 1)
+  +3 (cost 1)
+  ×2 (cost 1, only if current value is even)
+- Constraint: value must remain ≤ 20
+
+2) Define the complete state representation.
+State = (current_value)
+
+3) Specify action semantics precisely.
+- +1: allowed if value + 1 ≤ 20
+- +3: allowed if value + 3 ≤ 20
+- ×2: allowed if value is even AND value × 2 ≤ 20
+
+4) Deterministic-only mode. No randomness.
+
+5) Run a BFS search (all actions cost 1 step).
+Expand states strictly in increasing step count.
+
+6) Do not claim minimality unless all states with fewer steps
+than the found solution are exhausted.
+
+7) After finding a solution, re-simulate it step-by-step
+and verify all constraints.
+
+Output:
+- The shortest sequence of actions
+- The total step count
+- A step-by-step state trace
+
+
+
+###
+
+
+Solve the following task using Dynamic Programming.
+
+1) State definition
+Define a DP state that captures all information needed to make
+future decisions.
+State must be minimal but sufficient.
+
+2) Objective
+Define the value function V(state) that is being minimized or maximized.
+
+3) Recurrence
+For each state, enumerate valid actions.
+Define:
+V(state) = min/max over actions [ cost(state, action) + V(next_state) ]
+
+4) Base cases
+Explicitly list terminal states and their values.
+
+5) Memoization rule
+If a state has been evaluated before, reuse its value.
+Do not recompute.
+
+6) Computation order
+Specify whether this is:
+- top-down (recursive + memoization)
+- bottom-up (table fill)
+
+7) Policy extraction
+After computing V(initial_state), output:
+- optimal action sequence
+- value trace
+- verification of constraints
+
+## DP Example
+Solve this using Dynamic Programming.
+
+1) State
+State = (day, remaining_capital)
+
+2) Objective
+V(day, capital) = maximum achievable return from day to end
+
+3) Recurrence
+For each state:
+V(day, capital) =
+max over investment x ∈ [0, capital] of
+   return(day, x) + V(day+1, capital − x)
+
+4) Base case
+V(day = 5, capital) = 0
+
+5) Memoization
+Cache V(day, capital). Reuse if revisited.
+
+6) Computation
+Use top-down DP with memoization.
+
+7) Output
+- Optimal investment per day
+- Total return
+- DP table for verification
