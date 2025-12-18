@@ -1,0 +1,438 @@
+{
+  "scaffold": "merge_sort",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 11,
+    "pass_rate": 1.0,
+    "total_tokens": 14802
+  },
+  "started_at": "2025-12-17T23:31:48.614734",
+  "completed_at": "2025-12-17T23:32:57.244494",
+  "results": [
+    {
+      "test_case_id": "merge_sort_simple_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4551.472899998771,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 502,
+        "output": 559
+      }
+    },
+    {
+      "test_case_id": "merge_sort_simple_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3962.3574999859557,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 502,
+        "output": 559
+      }
+    },
+    {
+      "test_case_id": "merge_sort_simple_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3926.0889000142924,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 502,
+        "output": 559
+      }
+    },
+    {
+      "test_case_id": "merge_sort_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 10872.66749999253,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            4,
+            14,
+            15,
+            18,
+            29,
+            32,
+            36,
+            82,
+            95,
+            95
+          ]
+        },
+        "actual": {
+          "value": [
+            4,
+            14,
+            15,
+            18,
+            29,
+            32,
+            36,
+            82,
+            95,
+            95
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 517,
+        "output": 1571
+      }
+    },
+    {
+      "test_case_id": "merge_sort_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 10373.576600017259,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            4,
+            5,
+            12,
+            12,
+            28,
+            55,
+            70,
+            76,
+            87,
+            95
+          ]
+        },
+        "actual": {
+          "value": [
+            4,
+            5,
+            12,
+            12,
+            28,
+            55,
+            70,
+            76,
+            87,
+            95
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 517,
+        "output": 1293
+      }
+    },
+    {
+      "test_case_id": "merge_sort_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7622.904199990444,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            4,
+            26,
+            30,
+            65,
+            70,
+            72,
+            78,
+            84,
+            90,
+            92
+          ]
+        },
+        "actual": {
+          "value": [
+            4,
+            26,
+            30,
+            65,
+            70,
+            72,
+            78,
+            84,
+            90,
+            92
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 517,
+        "output": 1061
+      }
+    },
+    {
+      "test_case_id": "merge_sort_standard_04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 8519.81369999703,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            21,
+            29,
+            36,
+            54,
+            55,
+            58,
+            76,
+            90,
+            98
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            21,
+            29,
+            36,
+            54,
+            55,
+            58,
+            76,
+            90,
+            98
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 517,
+        "output": 1167
+      }
+    },
+    {
+      "test_case_id": "merge_sort_standard_05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 8123.315700009698,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            12,
+            13,
+            14,
+            20,
+            28,
+            36,
+            44,
+            44,
+            49,
+            98
+          ]
+        },
+        "actual": {
+          "value": [
+            12,
+            13,
+            14,
+            20,
+            28,
+            36,
+            44,
+            44,
+            49,
+            98
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 517,
+        "output": 1072
+      }
+    },
+    {
+      "test_case_id": "merge_sort_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 2997.017199988477,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 502,
+        "output": 342
+      }
+    },
+    {
+      "test_case_id": "merge_sort_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3216.3228999997955,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 502,
+        "output": 421
+      }
+    },
+    {
+      "test_case_id": "merge_sort_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4464.001199987251,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "actual": {
+          "value": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 502,
+        "output": 601
+      }
+    }
+  ]
+}

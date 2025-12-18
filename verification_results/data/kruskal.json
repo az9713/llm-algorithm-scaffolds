@@ -1,0 +1,245 @@
+{
+  "scaffold": "kruskal",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 9,
+    "pass_rate": 0.8181818181818182,
+    "total_tokens": 12278
+  },
+  "started_at": "2025-12-17T23:36:14.825386",
+  "completed_at": "2025-12-17T23:36:54.532502",
+  "results": [
+    {
+      "test_case_id": "kruskal_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3172.3000000056345,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "MST weight mismatch: expected 7, got 10",
+        "expected": 7,
+        "actual": 10,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 10
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 395
+      }
+    },
+    {
+      "test_case_id": "kruskal_simple_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4237.6566999882925,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3111.064800003078,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "MST weight mismatch: expected 7, got 10",
+        "expected": 7,
+        "actual": 10,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 10
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 395
+      }
+    },
+    {
+      "test_case_id": "kruskal_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3363.8642000150867,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3548.95320002106,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3647.830200003227,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 399
+      }
+    },
+    {
+      "test_case_id": "kruskal_standard_04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3647.353899985319,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_standard_05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3555.5393999966327,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3723.3096999989357,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3800.33359999652,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    },
+    {
+      "test_case_id": "kruskal_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3898.6801999853924,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": 7,
+        "actual": 7,
+        "details": {
+          "expected_weight": 7,
+          "actual_weight": 7
+        }
+      },
+      "llm_tokens": {
+        "input": 683,
+        "output": 447
+      }
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "scaffold": "bfs",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 8,
+    "pass_rate": 0.7272727272727273,
+    "total_tokens": 17407
+  },
+  "started_at": "2025-12-17T23:22:16.375143",
+  "completed_at": "2025-12-17T23:23:36.244997",
+  "results": [
+    {
+      "test_case_id": "bfs_simple_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 8864.411100017605,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 625,
+        "output": 1075
+      }
+    },
+    {
+      "test_case_id": "bfs_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6904.4327000156045,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'C', 'D'], got ['A', 'B', 'D']",
+        "expected": [
+          "A",
+          "C",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 625,
+        "output": 904
+      }
+    },
+    {
+      "test_case_id": "bfs_simple_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7523.024599999189,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "C",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "C",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 625,
+        "output": 969
+      }
+    },
+    {
+      "test_case_id": "bfs_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7671.056799998041,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 639,
+        "output": 1026
+      }
+    },
+    {
+      "test_case_id": "bfs_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6911.548700009007,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 663,
+        "output": 996
+      }
+    },
+    {
+      "test_case_id": "bfs_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 8397.82759998343,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'B', 'C', 'D', 'E', 'F', 'G'], got ['A', 'B', 'G']",
+        "expected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "G"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 677,
+        "output": 1009
+      }
+    },
+    {
+      "test_case_id": "bfs_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7661.854899983155,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'G'], got ['A', 'B', 'C', 'D', 'E', 'F', 'G']",
+        "expected": [
+          "A",
+          "G"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 677,
+        "output": 1109
+      }
+    },
+    {
+      "test_case_id": "bfs_standard_05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 10366.651899996214,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "F",
+          "G",
+          "H"
+        ],
+        "actual": [
+          "A",
+          "F",
+          "G",
+          "H"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 701,
+        "output": 1434
+      }
+    },
+    {
+      "test_case_id": "bfs_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4792.4350000103,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B"
+        ],
+        "actual": [
+          "A",
+          "B"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 587,
+        "output": 676
+      }
+    },
+    {
+      "test_case_id": "bfs_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4395.518999983324,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A"
+        ],
+        "actual": [
+          "A"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 564,
+        "output": 522
+      }
+    },
+    {
+      "test_case_id": "bfs_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6380.826599983266,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B"
+        ],
+        "actual": [
+          "A",
+          "B"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 587,
+        "output": 717
+      }
+    }
+  ]
+}

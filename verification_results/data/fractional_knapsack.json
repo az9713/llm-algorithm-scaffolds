@@ -1,0 +1,256 @@
+{
+  "scaffold": "fractional_knapsack",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 12947
+  },
+  "started_at": "2025-12-17T23:36:54.537781",
+  "completed_at": "2025-12-17T23:37:38.176678",
+  "results": [
+    {
+      "test_case_id": "fractional_knapsack_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3931.8488000135403,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4798.999999999069,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 626
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3471.5947000076994,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4132.740700006252,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4058.920000010403,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3869.8322999989614,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3706.993200001307,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3555.7604000205174,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4288.68749999674,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3987.7328000147827,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    },
+    {
+      "test_case_id": "fractional_knapsack_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3835.5717999802437,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "value": 240.0
+        },
+        "actual": {
+          "value": 240.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 681,
+        "output": 483
+      }
+    }
+  ]
+}

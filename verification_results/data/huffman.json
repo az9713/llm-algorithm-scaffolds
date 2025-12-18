@@ -1,0 +1,715 @@
+{
+  "scaffold": "huffman",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 18144
+  },
+  "started_at": "2025-12-17T23:34:50.125556",
+  "completed_at": "2025-12-17T23:36:14.817673",
+  "results": [
+    {
+      "test_case_id": "huffman_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7435.192200005986,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 224, 530), ('codes', {'f': '0', 'c': '100', 'd': '101', 'a': '1100', 'b': '1101', 'e': '111'}, {'a': '00', 'b': '01', 'c': '10', 'd': '110', 'e': '111', 'f': '1'})]",
+        "expected": {
+          "total_bits": 224,
+          "codes": {
+            "f": "0",
+            "c": "100",
+            "d": "101",
+            "a": "1100",
+            "b": "1101",
+            "e": "111"
+          }
+        },
+        "actual": {
+          "total_bits": 530,
+          "codes": {
+            "a": "00",
+            "b": "01",
+            "c": "10",
+            "d": "110",
+            "e": "111",
+            "f": "1"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              224,
+              530
+            ],
+            [
+              "codes",
+              {
+                "f": "0",
+                "c": "100",
+                "d": "101",
+                "a": "1100",
+                "b": "1101",
+                "e": "111"
+              },
+              {
+                "a": "00",
+                "b": "01",
+                "c": "10",
+                "d": "110",
+                "e": "111",
+                "f": "1"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 588,
+        "output": 1051
+      }
+    },
+    {
+      "test_case_id": "huffman_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7228.776100004325,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 224, 530), ('codes', {'f': '0', 'c': '100', 'd': '101', 'a': '1100', 'b': '1101', 'e': '111'}, {'a': '00', 'b': '01', 'c': '10', 'd': '110', 'e': '111', 'f': '1'})]",
+        "expected": {
+          "total_bits": 224,
+          "codes": {
+            "f": "0",
+            "c": "100",
+            "d": "101",
+            "a": "1100",
+            "b": "1101",
+            "e": "111"
+          }
+        },
+        "actual": {
+          "total_bits": 530,
+          "codes": {
+            "a": "00",
+            "b": "01",
+            "c": "10",
+            "d": "110",
+            "e": "111",
+            "f": "1"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              224,
+              530
+            ],
+            [
+              "codes",
+              {
+                "f": "0",
+                "c": "100",
+                "d": "101",
+                "a": "1100",
+                "b": "1101",
+                "e": "111"
+              },
+              {
+                "a": "00",
+                "b": "01",
+                "c": "10",
+                "d": "110",
+                "e": "111",
+                "f": "1"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 588,
+        "output": 1051
+      }
+    },
+    {
+      "test_case_id": "huffman_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 8040.545999974711,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 224, 530), ('codes', {'f': '0', 'c': '100', 'd': '101', 'a': '1100', 'b': '1101', 'e': '111'}, {'a': '00', 'b': '01', 'c': '10', 'd': '110', 'e': '111', 'f': '1'})]",
+        "expected": {
+          "total_bits": 224,
+          "codes": {
+            "f": "0",
+            "c": "100",
+            "d": "101",
+            "a": "1100",
+            "b": "1101",
+            "e": "111"
+          }
+        },
+        "actual": {
+          "total_bits": 530,
+          "codes": {
+            "a": "00",
+            "b": "01",
+            "c": "10",
+            "d": "110",
+            "e": "111",
+            "f": "1"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              224,
+              530
+            ],
+            [
+              "codes",
+              {
+                "f": "0",
+                "c": "100",
+                "d": "101",
+                "a": "1100",
+                "b": "1101",
+                "e": "111"
+              },
+              {
+                "a": "00",
+                "b": "01",
+                "c": "10",
+                "d": "110",
+                "e": "111",
+                "f": "1"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 588,
+        "output": 1051
+      }
+    },
+    {
+      "test_case_id": "huffman_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 9537.402099987958,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 159, 276), ('codes', {'c': '00', 'f': '01', 'b': '10', 'a': '110', 'e': '1110', 'd': '11110', 'g': '111110', 'h': '111111'}, {'a': '0', 'b': '110', 'c': '1110', 'd': '11110', 'e': '11111', 'f': '1111', 'g': '11100', 'h': '11101'})]",
+        "expected": {
+          "total_bits": 159,
+          "codes": {
+            "c": "00",
+            "f": "01",
+            "b": "10",
+            "a": "110",
+            "e": "1110",
+            "d": "11110",
+            "g": "111110",
+            "h": "111111"
+          }
+        },
+        "actual": {
+          "total_bits": 276,
+          "codes": {
+            "a": "0",
+            "b": "110",
+            "c": "1110",
+            "d": "11110",
+            "e": "11111",
+            "f": "1111",
+            "g": "11100",
+            "h": "11101"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              159,
+              276
+            ],
+            [
+              "codes",
+              {
+                "c": "00",
+                "f": "01",
+                "b": "10",
+                "a": "110",
+                "e": "1110",
+                "d": "11110",
+                "g": "111110",
+                "h": "111111"
+              },
+              {
+                "a": "0",
+                "b": "110",
+                "c": "1110",
+                "d": "11110",
+                "e": "11111",
+                "f": "1111",
+                "g": "11100",
+                "h": "11101"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 602,
+        "output": 1323
+      }
+    },
+    {
+      "test_case_id": "huffman_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 10628.500199993141,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 159, 340), ('codes', {'c': '00', 'f': '01', 'b': '10', 'a': '110', 'e': '1110', 'd': '11110', 'g': '111110', 'h': '111111'}, {'a': '0', 'b': '110', 'c': '1110', 'd': '11110', 'e': '11111', 'f': '1111', 'g': '11100', 'h': '11101'})]",
+        "expected": {
+          "total_bits": 159,
+          "codes": {
+            "c": "00",
+            "f": "01",
+            "b": "10",
+            "a": "110",
+            "e": "1110",
+            "d": "11110",
+            "g": "111110",
+            "h": "111111"
+          }
+        },
+        "actual": {
+          "total_bits": 340,
+          "codes": {
+            "a": "0",
+            "b": "110",
+            "c": "1110",
+            "d": "11110",
+            "e": "11111",
+            "f": "1111",
+            "g": "11100",
+            "h": "11101"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              159,
+              340
+            ],
+            [
+              "codes",
+              {
+                "c": "00",
+                "f": "01",
+                "b": "10",
+                "a": "110",
+                "e": "1110",
+                "d": "11110",
+                "g": "111110",
+                "h": "111111"
+              },
+              {
+                "a": "0",
+                "b": "110",
+                "c": "1110",
+                "d": "11110",
+                "e": "11111",
+                "f": "1111",
+                "g": "11100",
+                "h": "11101"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 602,
+        "output": 1455
+      }
+    },
+    {
+      "test_case_id": "huffman_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 9089.075500000035,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 159, 276), ('codes', {'c': '00', 'f': '01', 'b': '10', 'a': '110', 'e': '1110', 'd': '11110', 'g': '111110', 'h': '111111'}, {'a': '0', 'b': '110', 'c': '1110', 'd': '11110', 'e': '11111', 'f': '1111', 'g': '11100', 'h': '11101'})]",
+        "expected": {
+          "total_bits": 159,
+          "codes": {
+            "c": "00",
+            "f": "01",
+            "b": "10",
+            "a": "110",
+            "e": "1110",
+            "d": "11110",
+            "g": "111110",
+            "h": "111111"
+          }
+        },
+        "actual": {
+          "total_bits": 276,
+          "codes": {
+            "a": "0",
+            "b": "110",
+            "c": "1110",
+            "d": "11110",
+            "e": "11111",
+            "f": "1111",
+            "g": "11100",
+            "h": "11101"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              159,
+              276
+            ],
+            [
+              "codes",
+              {
+                "c": "00",
+                "f": "01",
+                "b": "10",
+                "a": "110",
+                "e": "1110",
+                "d": "11110",
+                "g": "111110",
+                "h": "111111"
+              },
+              {
+                "a": "0",
+                "b": "110",
+                "c": "1110",
+                "d": "11110",
+                "e": "11111",
+                "f": "1111",
+                "g": "11100",
+                "h": "11101"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 602,
+        "output": 1323
+      }
+    },
+    {
+      "test_case_id": "huffman_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 9348.578600009205,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 159, 276), ('codes', {'c': '00', 'f': '01', 'b': '10', 'a': '110', 'e': '1110', 'd': '11110', 'g': '111110', 'h': '111111'}, {'a': '0', 'b': '110', 'c': '1110', 'd': '11110', 'e': '11111', 'f': '1111', 'g': '11100', 'h': '11101'})]",
+        "expected": {
+          "total_bits": 159,
+          "codes": {
+            "c": "00",
+            "f": "01",
+            "b": "10",
+            "a": "110",
+            "e": "1110",
+            "d": "11110",
+            "g": "111110",
+            "h": "111111"
+          }
+        },
+        "actual": {
+          "total_bits": 276,
+          "codes": {
+            "a": "0",
+            "b": "110",
+            "c": "1110",
+            "d": "11110",
+            "e": "11111",
+            "f": "1111",
+            "g": "11100",
+            "h": "11101"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              159,
+              276
+            ],
+            [
+              "codes",
+              {
+                "c": "00",
+                "f": "01",
+                "b": "10",
+                "a": "110",
+                "e": "1110",
+                "d": "11110",
+                "g": "111110",
+                "h": "111111"
+              },
+              {
+                "a": "0",
+                "b": "110",
+                "c": "1110",
+                "d": "11110",
+                "e": "11111",
+                "f": "1111",
+                "g": "11100",
+                "h": "11101"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 602,
+        "output": 1323
+      }
+    },
+    {
+      "test_case_id": "huffman_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 10176.782099995762,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 159, 224), ('codes', {'c': '00', 'f': '01', 'b': '10', 'a': '110', 'e': '1110', 'd': '11110', 'g': '111110', 'h': '111111'}, {'a': '10', 'b': '1111', 'c': '110', 'd': '010', 'e': '011', 'f': '111', 'g': '000', 'h': '001'})]",
+        "expected": {
+          "total_bits": 159,
+          "codes": {
+            "c": "00",
+            "f": "01",
+            "b": "10",
+            "a": "110",
+            "e": "1110",
+            "d": "11110",
+            "g": "111110",
+            "h": "111111"
+          }
+        },
+        "actual": {
+          "total_bits": 224,
+          "codes": {
+            "a": "10",
+            "b": "1111",
+            "c": "110",
+            "d": "010",
+            "e": "011",
+            "f": "111",
+            "g": "000",
+            "h": "001"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              159,
+              224
+            ],
+            [
+              "codes",
+              {
+                "c": "00",
+                "f": "01",
+                "b": "10",
+                "a": "110",
+                "e": "1110",
+                "d": "11110",
+                "g": "111110",
+                "h": "111111"
+              },
+              {
+                "a": "10",
+                "b": "1111",
+                "c": "110",
+                "d": "010",
+                "e": "011",
+                "f": "111",
+                "g": "000",
+                "h": "001"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 602,
+        "output": 1313
+      }
+    },
+    {
+      "test_case_id": "huffman_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3462.5398000061978,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('codes', {'a': '0'}, {'a': ''})]",
+        "expected": {
+          "total_bits": 100,
+          "codes": {
+            "a": "0"
+          }
+        },
+        "actual": {
+          "total_bits": 100,
+          "codes": {
+            "a": ""
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "codes",
+              {
+                "a": "0"
+              },
+              {
+                "a": ""
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 554,
+        "output": 431
+      }
+    },
+    {
+      "test_case_id": "huffman_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3743.973400007235,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('codes', {'b': '0', 'a': '1'}, {'a': '0', 'b': '1'})]",
+        "expected": {
+          "total_bits": 20,
+          "codes": {
+            "b": "0",
+            "a": "1"
+          }
+        },
+        "actual": {
+          "total_bits": 20,
+          "codes": {
+            "a": "0",
+            "b": "1"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "codes",
+              {
+                "b": "0",
+                "a": "1"
+              },
+              {
+                "a": "0",
+                "b": "1"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 561,
+        "output": 485
+      }
+    },
+    {
+      "test_case_id": "huffman_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6000.503899995238,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('total_bits', 40, 80), ('codes', {'c': '00', 'a': '01', 'd': '10', 'b': '11'}, {'a': '00', 'b': '01', 'c': '10', 'd': '11'})]",
+        "expected": {
+          "total_bits": 40,
+          "codes": {
+            "c": "00",
+            "a": "01",
+            "d": "10",
+            "b": "11"
+          }
+        },
+        "actual": {
+          "total_bits": 80,
+          "codes": {
+            "a": "00",
+            "b": "01",
+            "c": "10",
+            "d": "11"
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "total_bits",
+              40,
+              80
+            ],
+            [
+              "codes",
+              {
+                "c": "00",
+                "a": "01",
+                "d": "10",
+                "b": "11"
+              },
+              {
+                "a": "00",
+                "b": "01",
+                "c": "10",
+                "d": "11"
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 574,
+        "output": 875
+      }
+    }
+  ]
+}

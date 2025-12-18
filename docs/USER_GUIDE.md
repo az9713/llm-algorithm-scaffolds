@@ -178,6 +178,56 @@ Scaffolds do the same thing for AI problem-solving.
 
 ---
 
+## Scaffold Reliability Guide
+
+Not all scaffolds perform equally when used with LLMs. Our automated verification testing reveals which scaffolds you can trust and which require extra caution.
+
+### Certified Scaffolds (100% Pass Rate)
+
+These scaffolds have been tested and work reliably with Claude 3 Haiku:
+
+| Scaffold | Category | Best For |
+|----------|----------|----------|
+| **astar** | Graph | Navigation with heuristics, GPS pathfinding |
+| **merge_sort** | Divide & Conquer | Sorting data efficiently |
+| **nqueens** | Backtracking | Placement puzzles, non-attacking arrangements |
+| **subset_sum** | Backtracking | Finding combinations that sum to a target |
+| **topological_sort** | Graph | Task ordering with dependencies |
+
+**Recommendation:** Start with these scaffolds for the best experience.
+
+### Partial Scaffolds (50-82% Pass Rate)
+
+These scaffolds work well but may have occasional issues:
+
+| Scaffold | Pass Rate | Category | Notes |
+|----------|-----------|----------|-------|
+| **kruskal** | 81.8% | Greedy | Great for minimum spanning trees |
+| **bfs** | 72.7% | Graph | Best for unweighted shortest paths |
+| **binary_search** | 72.7% | Divide & Conquer | Works well for basic searches |
+| **bellman_ford** | 54.5% | Graph | Use when edges can be negative |
+| **dfs** | 54.5% | Graph | Good for exploration tasks |
+| **edit_distance** | 54.5% | DP | Best for shorter strings |
+
+**Recommendation:** These are reliable for most use cases. Verify results for critical applications.
+
+### Scaffolds Requiring Manual Verification
+
+The following scaffolds have lower pass rates (<50%) and may produce incorrect results:
+
+| Category | Scaffolds | Why They Struggle |
+|----------|-----------|-------------------|
+| Graph | dijkstra, floyd_warshall | Complex state management |
+| Greedy | activity_selection, huffman, fractional_knapsack | Greedy choice interpretation |
+| DP | knapsack_01, lcs, lis, matrix_chain | Table construction complexity |
+| Optimization | All four scaffolds | Numerical precision |
+| String | rabin_karp, trie_operations | Hash and tree operations |
+| Numerical | All three scaffolds | Convergence and precision |
+
+**Recommendation:** Always manually verify results from these scaffolds. Consider using a more capable model (GPT-4, Claude 3 Opus) for better performance.
+
+---
+
 ## Finding the Right Scaffold
 
 ### Problem Type Quick Reference

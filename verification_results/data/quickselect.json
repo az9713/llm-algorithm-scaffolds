@@ -1,0 +1,256 @@
+{
+  "scaffold": "quickselect",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 3,
+    "pass_rate": 0.2727272727272727,
+    "total_tokens": 12850
+  },
+  "started_at": "2025-12-17T23:32:57.247415",
+  "completed_at": "2025-12-17T23:33:49.142188",
+  "results": [
+    {
+      "test_case_id": "quickselect_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3489.654300006805,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 2}, got {'value': 4}",
+        "expected": {
+          "value": 2
+        },
+        "actual": {
+          "value": 4
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 563,
+        "output": 425
+      }
+    },
+    {
+      "test_case_id": "quickselect_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3156.579200003762,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 2}, got {'value': 4}",
+        "expected": {
+          "value": 2
+        },
+        "actual": {
+          "value": 4
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 563,
+        "output": 386
+      }
+    },
+    {
+      "test_case_id": "quickselect_simple_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3795.808800001396,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": 2
+        },
+        "actual": {
+          "value": 2
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 563,
+        "output": 487
+      }
+    },
+    {
+      "test_case_id": "quickselect_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5839.998499985086,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": 95
+        },
+        "actual": {
+          "value": 95
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 743
+      }
+    },
+    {
+      "test_case_id": "quickselect_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6326.2917999818455,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "value": 4
+        },
+        "actual": {
+          "value": 4
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 772
+      }
+    },
+    {
+      "test_case_id": "quickselect_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4850.326200015843,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 70}, got {'value': 54}",
+        "expected": {
+          "value": 70
+        },
+        "actual": {
+          "value": 54
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 616
+      }
+    },
+    {
+      "test_case_id": "quickselect_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6857.487700006459,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 44}, got {'value': 55}",
+        "expected": {
+          "value": 44
+        },
+        "actual": {
+          "value": 55
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 887
+      }
+    },
+    {
+      "test_case_id": "quickselect_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3964.92520000902,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 49}, got {'value': 34}",
+        "expected": {
+          "value": 49
+        },
+        "actual": {
+          "value": 34
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 504
+      }
+    },
+    {
+      "test_case_id": "quickselect_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4990.571800008183,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 47}, got {'value': 11}",
+        "expected": {
+          "value": 47
+        },
+        "actual": {
+          "value": 11
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 621
+      }
+    },
+    {
+      "test_case_id": "quickselect_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3422.726999997394,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 38}, got {'value': 30}",
+        "expected": {
+          "value": 38
+        },
+        "actual": {
+          "value": 30
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 472
+      }
+    },
+    {
+      "test_case_id": "quickselect_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5200.1548999978695,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'value': 27}, got {'value': 35}",
+        "expected": {
+          "value": 27
+        },
+        "actual": {
+          "value": 35
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 696
+      }
+    }
+  ]
+}

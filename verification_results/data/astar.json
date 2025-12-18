@@ -1,0 +1,300 @@
+{
+  "scaffold": "astar",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 11,
+    "pass_rate": 1.0,
+    "total_tokens": 19271
+  },
+  "started_at": "2025-12-17T23:25:58.126974",
+  "completed_at": "2025-12-17T23:27:21.009513",
+  "results": [
+    {
+      "test_case_id": "astar_simple_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7035.3947000112385,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 1040
+      }
+    },
+    {
+      "test_case_id": "astar_simple_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7790.878800005885,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_simple_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7432.914599979995,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6711.111100012204,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 8619.795599981444,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 1040
+      }
+    },
+    {
+      "test_case_id": "astar_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 12498.988700011978,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 1040
+      }
+    },
+    {
+      "test_case_id": "astar_standard_04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7026.428399985889,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_standard_05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6881.000900000799,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6308.6873999855015,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6397.846100007882,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    },
+    {
+      "test_case_id": "astar_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6179.085199983092,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 789,
+        "output": 934
+      }
+    }
+  ]
+}

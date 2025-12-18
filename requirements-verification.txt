@@ -1,0 +1,26 @@
+# Verification Framework Dependencies
+# Install with: pip install -r requirements-verification.txt
+
+# Core testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-timeout>=2.1.0
+
+# LLM integration
+anthropic>=0.18.0
+
+# Reference implementations
+networkx>=3.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Configuration and validation
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Report generation
+jinja2>=3.1.0
+
+# Utilities
+tenacity>=8.2.0
+python-dotenv>=1.0.0

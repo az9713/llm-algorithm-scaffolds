@@ -1,0 +1,321 @@
+{
+  "scaffold": "dfs",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 6,
+    "pass_rate": 0.5454545454545454,
+    "total_tokens": 13178
+  },
+  "started_at": "2025-12-17T23:23:36.249675",
+  "completed_at": "2025-12-17T23:24:27.208393",
+  "results": [
+    {
+      "test_case_id": "dfs_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5723.9083999884315,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'D'], got ['A', 'B', 'C', 'D']",
+        "expected": [
+          "A",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 625,
+        "output": 730
+      }
+    },
+    {
+      "test_case_id": "dfs_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3948.2464999891818,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'C', 'D'], got ['A', 'B', 'C', 'D']",
+        "expected": [
+          "A",
+          "C",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 625,
+        "output": 523
+      }
+    },
+    {
+      "test_case_id": "dfs_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3749.322099989513,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'C', 'D'], got ['A', 'B', 'C', 'D']",
+        "expected": [
+          "A",
+          "C",
+          "D"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 625,
+        "output": 495
+      }
+    },
+    {
+      "test_case_id": "dfs_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6635.54469999508,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 639,
+        "output": 822
+      }
+    },
+    {
+      "test_case_id": "dfs_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5994.61059999885,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 663,
+        "output": 830
+      }
+    },
+    {
+      "test_case_id": "dfs_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4686.704299994744,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 677,
+        "output": 519
+      }
+    },
+    {
+      "test_case_id": "dfs_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5383.130500005791,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'G'], got ['A', 'B', 'C', 'D', 'E', 'F', 'G']",
+        "expected": [
+          "A",
+          "G"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 677,
+        "output": 505
+      }
+    },
+    {
+      "test_case_id": "dfs_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3704.459400003543,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Different path: expected ['A', 'F', 'G', 'H'], got ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']",
+        "expected": [
+          "A",
+          "F",
+          "G",
+          "H"
+        ],
+        "actual": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 701,
+        "output": 535
+      }
+    },
+    {
+      "test_case_id": "dfs_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 2826.298899977701,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B"
+        ],
+        "actual": [
+          "A",
+          "B"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 587,
+        "output": 353
+      }
+    },
+    {
+      "test_case_id": "dfs_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3547.8058999869972,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A"
+        ],
+        "actual": [
+          "A"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 564,
+        "output": 400
+      }
+    },
+    {
+      "test_case_id": "dfs_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4758.4411999851,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": [
+          "A",
+          "B"
+        ],
+        "actual": [
+          "A",
+          "B"
+        ],
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 587,
+        "output": 496
+      }
+    }
+  ]
+}

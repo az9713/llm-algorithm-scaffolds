@@ -1,0 +1,476 @@
+{
+  "scaffold": "lcs",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 14494
+  },
+  "started_at": "2025-12-17T23:44:26.940508",
+  "completed_at": "2025-12-17T23:45:26.858462",
+  "results": [
+    {
+      "test_case_id": "lcs_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5179.881399992155,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'BDAB', ['A', 'B', 'C', 'B'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "BDAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "B",
+            "C",
+            "B"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "BDAB",
+              [
+                "A",
+                "B",
+                "C",
+                "B"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 598
+      }
+    },
+    {
+      "test_case_id": "lcs_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4932.915800018236,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'BDAB', ['A', 'B', 'C', 'B'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "BDAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "B",
+            "C",
+            "B"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "BDAB",
+              [
+                "A",
+                "B",
+                "C",
+                "B"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 598
+      }
+    },
+    {
+      "test_case_id": "lcs_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4460.719199996674,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'BDAB', ['A', 'B', 'C', 'B'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "BDAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "B",
+            "C",
+            "B"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "BDAB",
+              [
+                "A",
+                "B",
+                "C",
+                "B"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 598
+      }
+    },
+    {
+      "test_case_id": "lcs_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5632.809200003976,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5732.07330002333,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5363.076500012539,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5492.777100007515,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5416.152599995257,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5706.211099983193,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5877.011800010223,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "lcs_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6124.090900004376,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', 'GTAB', ['A', 'G', 'T', 'A'])]",
+        "expected": {
+          "length": 4,
+          "sequence": "GTAB"
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            "A",
+            "G",
+            "T",
+            "A"
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              "GTAB",
+              [
+                "A",
+                "G",
+                "T",
+                "A"
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 620,
+        "output": 735
+      }
+    }
+  ]
+}

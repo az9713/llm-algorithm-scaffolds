@@ -1,0 +1,398 @@
+{
+  "scaffold": "topological_sort",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 11,
+    "pass_rate": 1.0,
+    "total_tokens": 13949
+  },
+  "started_at": "2025-12-17T23:29:45.607618",
+  "completed_at": "2025-12-17T23:30:35.843435",
+  "results": [
+    {
+      "test_case_id": "topological_sort_simple_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6452.2789000184275,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 645,
+        "output": 830
+      }
+    },
+    {
+      "test_case_id": "topological_sort_simple_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5591.917800018564,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 645,
+        "output": 830
+      }
+    },
+    {
+      "test_case_id": "topological_sort_simple_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5672.151499980828,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 645,
+        "output": 830
+      }
+    },
+    {
+      "test_case_id": "topological_sort_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3767.50479999464,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 480
+      }
+    },
+    {
+      "test_case_id": "topological_sort_standard_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4126.773600000888,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 480
+      }
+    },
+    {
+      "test_case_id": "topological_sort_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3765.312100003939,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 480
+      }
+    },
+    {
+      "test_case_id": "topological_sort_standard_04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3878.479899984086,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 479
+      }
+    },
+    {
+      "test_case_id": "topological_sort_standard_05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6105.660800007172,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 796
+      }
+    },
+    {
+      "test_case_id": "topological_sort_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3680.372400005581,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 473
+      }
+    },
+    {
+      "test_case_id": "topological_sort_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3711.8896000029054,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 479
+      }
+    },
+    {
+      "test_case_id": "topological_sort_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 3483.2294000079855,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "actual": {
+          "order": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 673,
+        "output": 473
+      }
+    }
+  ]
+}

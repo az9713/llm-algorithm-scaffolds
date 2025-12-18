@@ -1,0 +1,337 @@
+{
+  "scaffold": "kmp",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 4,
+    "pass_rate": 0.36363636363636365,
+    "total_tokens": 13971
+  },
+  "started_at": "2025-12-17T23:54:15.489807",
+  "completed_at": "2025-12-17T23:55:10.043387",
+  "results": [
+    {
+      "test_case_id": "kmp_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 12250.792000006186,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [10]}, got {'matches': [0, 5, 10, 15]}",
+        "expected": {
+          "matches": [
+            10
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            5,
+            10,
+            15
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 737,
+        "output": 624
+      }
+    },
+    {
+      "test_case_id": "kmp_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4865.459799999371,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [10]}, got {'matches': [0, 5, 10, 15]}",
+        "expected": {
+          "matches": [
+            10
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            5,
+            10,
+            15
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 737,
+        "output": 624
+      }
+    },
+    {
+      "test_case_id": "kmp_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4869.138200010639,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [10]}, got {'matches': [0, 5, 10, 15]}",
+        "expected": {
+          "matches": [
+            10
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            5,
+            10,
+            15
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 737,
+        "output": 624
+      }
+    },
+    {
+      "test_case_id": "kmp_standard_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4382.861699996283,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 547
+      }
+    },
+    {
+      "test_case_id": "kmp_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3762.7691000234336,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [0, 9, 13]}, got {'matches': [0]}",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            0
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 449
+      }
+    },
+    {
+      "test_case_id": "kmp_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4750.1081000082195,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 547
+      }
+    },
+    {
+      "test_case_id": "kmp_standard_04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4445.132799999556,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 547
+      }
+    },
+    {
+      "test_case_id": "kmp_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3706.2456000130624,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [0, 9, 13]}, got {'matches': [1, 9, 15]}",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            1,
+            9,
+            15
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 461
+      }
+    },
+    {
+      "test_case_id": "kmp_edge_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4222.577200009255,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 547
+      }
+    },
+    {
+      "test_case_id": "kmp_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3657.664600003045,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [0, 9, 13]}, got {'matches': [0]}",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            0
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 449
+      }
+    },
+    {
+      "test_case_id": "kmp_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3640.5878999794368,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Expected {'matches': [0, 9, 13]}, got {'matches': [1, 9, 15]}",
+        "expected": {
+          "matches": [
+            0,
+            9,
+            13
+          ]
+        },
+        "actual": {
+          "matches": [
+            1,
+            9,
+            15
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 735,
+        "output": 461
+      }
+    }
+  ]
+}

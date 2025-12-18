@@ -9,7 +9,8 @@
 5. [Understanding Results](#understanding-results)
 6. [AI Assistant Questions](#ai-assistant-questions)
 7. [Technical Questions](#technical-questions)
-8. [Contributing](#contributing)
+8. [Verification Framework](#verification-framework)
+9. [Contributing](#contributing)
 
 ---
 
@@ -526,6 +527,203 @@ Larger models (13B+ parameters) generally work better.
 **Practical meaning:**
 - n=1,000: ~10,000 operations
 - n=1,000,000: ~20,000,000 operations
+
+---
+
+## Verification Framework
+
+### Q: What is the verification framework?
+
+**A:** The verification framework is an automated testing system that validates whether scaffolds produce correct results when used with LLMs. It:
+
+1. Generates test cases using trusted libraries (networkx, numpy, scipy)
+2. Sends scaffold + test case to Claude
+3. Parses the LLM's response
+4. Validates against ground truth
+5. Produces certification reports
+
+See [Verification Guide](VERIFICATION.md) for details.
+
+---
+
+### Q: What is the current status of scaffold verification?
+
+**A:** As of December 2025:
+
+| Status | Count | Examples |
+|--------|-------|----------|
+| **CERTIFIED (100%)** | 5 | astar, merge_sort, nqueens, subset_sum, topological_sort |
+| **PARTIAL (50-82%)** | 6 | kruskal, bfs, binary_search, bellman_ford, dfs, edit_distance |
+| **FAILED (<50%)** | 22 | dijkstra, floyd_warshall, knapsack_01, lcs, and others |
+
+**Recommendation:** Start with certified scaffolds for the best experience.
+
+---
+
+### Q: Why do so many scaffolds fail verification?
+
+**A:** Most failures are **LLM algorithmic errors**, not framework problems. Common issues:
+
+| Issue | Affected Scaffolds |
+|-------|-------------------|
+| Priority queue management | dijkstra |
+| Matrix operations | floyd_warshall, matrix_chain |
+| Greedy choice interpretation | activity_selection, fractional_knapsack |
+| Tree construction | huffman, trie |
+| Hash calculations | rabin_karp |
+| Numerical precision | newton_raphson, bisection |
+
+These represent opportunities to improve scaffold designs to better guide LLMs.
+
+---
+
+### Q: How can I help improve failing scaffolds?
+
+**A:**
+
+1. Analyze failure reports in `verification_results/reports/`
+2. Identify patterns in LLM errors
+3. Propose scaffold modifications:
+   - Add more explicit state tables
+   - Break complex steps into sub-steps
+   - Add verification checkpoints
+4. Test with `python verify.py <scaffold>`
+5. Submit improvements with before/after pass rates
+
+See [Developer Guide - Improving Failing Scaffolds](DEVELOPER_GUIDE.md#improving-failing-scaffolds) for strategies.
+
+---
+
+### Q: Do I need the verification framework to use scaffolds?
+
+**A:** No! The verification framework is completely optional. You can use scaffolds by simply copying them into any AI assistant.
+
+The verification framework is for:
+- Developers who want to validate scaffold correctness
+- Quality assurance before releasing new scaffolds
+- Generating certification documentation
+
+---
+
+### Q: How do I run verification?
+
+**A:** Three simple steps:
+
+```bash
+# 1. Install dependencies
+pip install -r requirements-verification.txt
+
+# 2. Set your API key
+export ANTHROPIC_API_KEY=your_key_here
+
+# 3. Run verification
+python verify.py dijkstra          # Single scaffold
+python verify.py --category graph  # All graph algorithms
+python verify.py                   # All 33 scaffolds
+```
+
+---
+
+### Q: What does "CERTIFIED" mean?
+
+**A:** Certification status indicates scaffold reliability:
+
+| Status | Pass Rate | Meaning |
+|--------|-----------|---------|
+| CERTIFIED | ≥90% | Works reliably, ready for use |
+| PARTIAL | 50-89% | Works but may have edge case issues |
+| FAILED | <50% | Has significant problems |
+
+---
+
+### Q: How much does verification cost?
+
+**A:** Costs depend on the model used:
+
+| Mode | Model | Per Scaffold | All 33 Scaffolds |
+|------|-------|-------------|------------------|
+| `dev` (default) | Claude Haiku | ~$0.01 | ~$0.30 |
+| `cert` | Claude Opus | ~$0.50 | ~$15.00 |
+
+**Tip:** Use `dev` mode for iteration, `cert` mode only for final certification.
+
+---
+
+### Q: Why does verification use Claude only?
+
+**A:** The initial implementation focuses on Claude for:
+- Consistent, reproducible results
+- High-quality instruction following
+- API simplicity
+
+Future versions may add support for other LLMs (GPT-4, Gemini, etc.).
+
+---
+
+### Q: A scaffold failed verification. What should I do?
+
+**A:** Follow these steps:
+
+1. **Check the report**: `verification_results/reports/<scaffold>_report.md`
+2. **Look at failures**: Compare "Expected" vs "Actual" values
+3. **Identify the issue**:
+   - **Parsing error**: LLM output format unexpected
+   - **Algorithm error**: LLM got wrong answer
+   - **Edge case**: Scaffold doesn't handle boundary conditions
+4. **Fix the scaffold** or **adjust the test**
+
+---
+
+### Q: Can I add verification for my custom scaffold?
+
+**A:** Yes! See [Developer Guide - Adding to Verification](DEVELOPER_GUIDE.md#adding-a-new-scaffold-to-verification) for:
+
+1. Adding reference implementation
+2. Registering the scaffold
+3. Adding output format
+4. Adding response parser
+
+---
+
+### Q: Where are verification results stored?
+
+**A:** Results are saved to `verification_results/`:
+
+```
+verification_results/
+├── data/                    # Raw JSON results
+│   ├── dijkstra.json
+│   └── ...
+└── reports/                 # Markdown reports
+    ├── dijkstra_report.md
+    └── CERTIFICATION_SUMMARY.md
+```
+
+---
+
+### Q: How do I regenerate reports without re-running tests?
+
+**A:**
+```bash
+python verify.py report
+```
+
+This regenerates markdown reports from existing JSON data.
+
+---
+
+### Q: What libraries are used as ground truth?
+
+**A:**
+
+| Category | Library |
+|----------|---------|
+| Graph algorithms | networkx |
+| Numerical methods | scipy |
+| General computation | numpy |
+| DP/Greedy/Backtracking | Custom verified implementations |
+
+These are industry-standard, well-tested libraries.
 
 ---
 

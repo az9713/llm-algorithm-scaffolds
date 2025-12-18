@@ -9,11 +9,12 @@
 5. [Creating New Scaffolds](#creating-new-scaffolds)
 6. [Using Generic Templates](#using-generic-templates)
 7. [Testing Scaffolds](#testing-scaffolds)
-8. [Style Guidelines](#style-guidelines)
-9. [Common Patterns and Anti-Patterns](#common-patterns-and-anti-patterns)
-10. [Contributing to the Project](#contributing-to-the-project)
-11. [Maintenance Tasks](#maintenance-tasks)
-12. [Troubleshooting Development Issues](#troubleshooting-development-issues)
+8. [Automated Verification Framework](#automated-verification-framework)
+9. [Style Guidelines](#style-guidelines)
+10. [Common Patterns and Anti-Patterns](#common-patterns-and-anti-patterns)
+11. [Contributing to the Project](#contributing-to-the-project)
+12. [Maintenance Tasks](#maintenance-tasks)
+13. [Troubleshooting Development Issues](#troubleshooting-development-issues)
 
 ---
 
@@ -565,6 +566,272 @@ Before finalizing a scaffold:
 
 ---
 
+## Automated Verification Framework
+
+The project includes a fully automated verification framework that validates scaffolds produce correct results when used with LLMs.
+
+### Current Status (December 2025)
+
+**Verified:** 33 scaffolds
+**Certified (100%):** 5 scaffolds (astar, merge_sort, nqueens, subset_sum, topological_sort)
+**Partial (≥50%):** 6 scaffolds
+**Failed (<50%):** 22 scaffolds
+
+See [VERIFICATION.md](VERIFICATION.md) for detailed status of each scaffold.
+
+### Recent Technical Improvements
+
+The verification framework received significant updates in December 2025:
+
+#### 1. Unicode Encoding Fix (`verification/cli.py`)
+
+**Problem:** Windows cp1252 encoding couldn't handle Unicode symbols.
+
+**Solution:**
+```python
+# Before (caused UnicodeEncodeError on Windows)
+status_symbols = {"pass": "✓", "partial": "◐", "fail": "✗"}
+
+# After (works on all platforms)
+status_symbols = {"pass": "[OK]", "partial": "[..]", "fail": "[XX]"}
+```
+
+#### 2. MST Validator Fix (`verification/validators/set_equivalence.py`)
+
+**Problem:** MSTValidator was iterating over dict keys instead of edge list.
+
+**Solution:**
+```python
+# Fixed to handle {"total_weight": N, "edges": [...]} format
+if isinstance(actual, dict):
+    actual_weight = actual.get("total_weight", 0)
+    if actual_weight == 0 and "edges" in actual:
+        edges = actual.get("edges", [])
+        for edge in edges:
+            if isinstance(edge, (list, tuple)) and len(edge) >= 3:
+                actual_weight += float(edge[2])
+```
+
+**Impact:** Kruskal scaffold improved from 0% to 81.8% pass rate.
+
+#### 3. Activity Selection Parser Fix (`verification/llm/response_parser.py`)
+
+**Problem:** Parser returned extra `activities` field not expected by validator.
+
+**Solution:** Parser now returns only `{"count": N}` to match expected format.
+
+#### 4. Algorithm-Specific Output Formats (`verification/llm/prompt_builder.py`)
+
+Added 12 new output formats to improve LLM response structure:
+- `huffman`, `sudoku`, `graph_coloring`, `matrix_chain`
+- `trie`, `monte_carlo`, `optimization`, `activity`
+- `kruskal`, `fractional_knapsack`, `subset_sum`, `edit_distance`
+
+### Framework Architecture
+
+```
+verification/
+├── cli.py                 # Command-line interface
+├── config.py              # Pydantic settings
+├── runner.py              # Test orchestrator
+├── registry.py            # Scaffold-to-generator/validator mapping
+├── llm/                   # LLM integration
+│   ├── base.py           # Abstract LLM interface
+│   ├── claude.py         # Claude API implementation
+│   ├── prompt_builder.py # Scaffold parser and prompt construction
+│   └── response_parser.py # Response parsing
+├── reference/             # Ground truth implementations
+│   ├── graph.py          # networkx-based
+│   ├── divide_conquer.py
+│   ├── greedy.py
+│   ├── backtracking.py
+│   ├── dynamic_programming.py
+│   ├── optimization.py
+│   ├── string_algo.py
+│   └── numerical.py
+├── generators/            # Test case generators
+│   ├── base.py           # TestCase, TestSuite classes
+│   └── graph_gen.py      # Category-specific generators
+├── validators/            # Output validators
+│   ├── base.py           # Validator ABC
+│   ├── exact_match.py
+│   ├── numeric_tolerance.py
+│   └── set_equivalence.py
+└── reports/               # Report generation
+    └── generator.py
+```
+
+### Running Verification
+
+```bash
+# Setup
+pip install -r requirements-verification.txt
+export ANTHROPIC_API_KEY=your_key_here
+
+# Basic commands
+python verify.py list              # List all scaffolds
+python verify.py dijkstra          # Verify single scaffold
+python verify.py --category graph  # Verify a category
+python verify.py                   # Verify ALL scaffolds
+python verify.py --mode cert       # Use Opus for certification
+```
+
+### How Verification Works
+
+1. **Test Generation**: Creates test cases using reference implementations
+2. **Prompt Building**: Combines scaffold + test case into prompt
+3. **LLM Execution**: Sends prompt to Claude API
+4. **Response Parsing**: Extracts structured answers from LLM response
+5. **Validation**: Compares answer against ground truth
+6. **Reporting**: Generates markdown certification reports
+
+### Adding a New Scaffold to Verification
+
+When you create a new scaffold, follow these steps to add verification support:
+
+#### Step 1: Add Reference Implementation
+
+Add the algorithm to the appropriate file in `verification/reference/`:
+
+```python
+# verification/reference/graph.py
+def new_algorithm(vertices: list, edges: list, **params) -> dict:
+    """Implement using trusted library (networkx, numpy, scipy)."""
+    import networkx as nx
+
+    G = nx.DiGraph()
+    G.add_nodes_from(vertices)
+    for u, v, w in edges:
+        G.add_edge(u, v, weight=w)
+
+    # Use library function
+    result = nx.some_algorithm(G, **params)
+
+    return {"result_key": result}
+```
+
+#### Step 2: Register the Scaffold
+
+Add to `verification/registry.py`:
+
+```python
+SCAFFOLD_REGISTRY = {
+    "graph": [
+        "bfs", "dfs", "dijkstra", "astar",
+        "bellman_ford", "floyd_warshall", "topological_sort",
+        "new_algorithm"  # Add your scaffold here
+    ],
+    # ...
+}
+
+VALIDATOR_REGISTRY = {
+    # ...
+    "new_algorithm": "exact_match",  # or "numeric", "set", etc.
+}
+```
+
+#### Step 3: Add Output Format
+
+Update `verification/llm/prompt_builder.py`:
+
+```python
+OUTPUT_FORMATS = {
+    # ...
+    "new_algorithm": """
+OUTPUT FORMAT:
+Provide your final answer as:
+RESULT: <value>
+""",
+}
+```
+
+#### Step 4: Add Response Parser
+
+Update `verification/llm/response_parser.py`:
+
+```python
+class ResponseParser:
+    def parse_new_algorithm(self, response: str) -> dict:
+        """Parse new_algorithm response."""
+        # Extract result from response
+        match = re.search(r'RESULT:\s*(.+)', response)
+        if match:
+            return {"result_key": match.group(1).strip()}
+        return {}
+```
+
+#### Step 5: Test Your Addition
+
+```bash
+# Run verification for your new scaffold
+python verify.py new_algorithm
+
+# Check the report
+cat verification_results/reports/new_algorithm_report.md
+```
+
+### Validator Types
+
+| Validator | Use Case | Example |
+|-----------|----------|---------|
+| `exact_match` | Exact value match | BFS distances |
+| `dict_match` | Dictionary comparison | Dijkstra distances |
+| `path_match` | Path comparison | Shortest paths |
+| `numeric` | Float with tolerance | Newton-Raphson roots |
+| `set` | Unordered set match | MST edges |
+| `optimization` | Within % of optimum | Simulated annealing |
+
+### Creating Custom Validators
+
+```python
+from verification.validators.base import Validator, ValidationResult
+
+class MyValidator(Validator):
+    def validate(self, actual: any, expected: any) -> ValidationResult:
+        # Custom validation logic
+        is_correct = self._check(actual, expected)
+
+        return ValidationResult(
+            is_valid=is_correct,
+            message="Validation passed" if is_correct else "Mismatch",
+            details={"actual": actual, "expected": expected}
+        )
+```
+
+### Testing Reference Implementations
+
+```bash
+# Run all reference implementation tests
+pytest verification/tests/
+
+# Run specific test file
+pytest verification/tests/test_reference.py
+
+# Run with verbose output
+pytest -v verification/tests/
+```
+
+### Cost Management
+
+| Mode | Model | Cost Per Scaffold | All 33 Scaffolds |
+|------|-------|------------------|------------------|
+| `dev` (default) | Claude Haiku | ~$0.01 | ~$0.30 |
+| `cert` | Claude Opus | ~$0.50 | ~$15.00 |
+
+**Best practice:**
+- Use `dev` mode for iteration
+- Use `cert` mode only for final certification
+
+### Certification Status
+
+| Status | Pass Rate | Meaning |
+|--------|-----------|---------|
+| CERTIFIED | ≥90% | Scaffold works reliably |
+| PARTIAL | 50-89% | Scaffold needs improvement |
+| FAILED | <50% | Scaffold has issues |
+
+---
+
 ## Style Guidelines
 
 ### Markdown Formatting
@@ -879,6 +1146,118 @@ When major AI updates occur (e.g., GPT-5, Claude 4):
 
 ---
 
+## Improving Failing Scaffolds
+
+With only 5 of 33 scaffolds achieving 100% pass rate, there's significant opportunity for improvement.
+
+### Why Scaffolds Fail
+
+Based on verification analysis, LLMs struggle with:
+
+| Challenge | Affected Scaffolds | Symptoms |
+|-----------|-------------------|----------|
+| **Priority queue management** | dijkstra | Wrong node selected next |
+| **Matrix operations** | floyd_warshall, matrix_chain | Index errors, dimension confusion |
+| **Greedy choice logic** | activity_selection, fractional_knapsack | Wrong "best" option selected |
+| **Tree construction** | huffman, trie | Parent-child relationships lost |
+| **Hash calculations** | rabin_karp | Modular arithmetic errors |
+| **Convergence criteria** | newton_raphson, bisection | Premature stopping or infinite loops |
+
+### Strategies to Improve Pass Rates
+
+#### 1. Add Explicit State Tables
+
+Before:
+```
+Track distances and visited nodes.
+```
+
+After:
+```
+After EACH iteration, show this table:
+| Node | Distance | Visited | Parent |
+|------|----------|---------|--------|
+| A    | 0        | Yes     | None   |
+| B    | ...      | ...     | ...    |
+```
+
+#### 2. Number Every Decision Point
+
+Before:
+```
+Select the best item using the greedy criterion.
+```
+
+After:
+```
+For item selection:
+1. Calculate value-to-weight ratio for EACH remaining item
+2. List all ratios in a table: | Item | Value | Weight | Ratio |
+3. Select the item with HIGHEST ratio
+4. VERIFY: Is this ratio truly the maximum? Double-check.
+```
+
+#### 3. Add Verification Checkpoints
+
+Before:
+```
+Continue until the heap is empty.
+```
+
+After:
+```
+CHECKPOINT after each extraction:
+- What node was extracted?
+- What is its final distance?
+- Is this distance minimal? (Check: no shorter path through unvisited nodes)
+- List remaining heap contents
+```
+
+#### 4. Break Complex Steps into Sub-Steps
+
+Before:
+```
+Build the Huffman tree from frequency table.
+```
+
+After:
+```
+Building Huffman tree:
+1. Create leaf node for each character with its frequency
+2. Insert all leaves into a min-heap ordered by frequency
+3. While heap has more than one node:
+   a. Extract two nodes with LOWEST frequencies
+   b. Create new internal node with frequency = sum
+   c. Set extracted nodes as left and right children
+   d. Insert new node into heap
+   e. SHOW current heap state
+4. Remaining node is the root
+```
+
+### Testing Your Improvements
+
+```bash
+# Test single scaffold before and after changes
+python verify.py <scaffold_name>
+
+# Compare results
+cat verification_results/reports/<scaffold_name>_report.md
+
+# Run full regression to ensure no breakage
+python verify.py --category <category>
+```
+
+### Key Files for Scaffold Improvements
+
+| File | Purpose | When to Modify |
+|------|---------|----------------|
+| `scaffolds/NN_category/<name>.md` | Scaffold content | Always - primary improvement target |
+| `verification/llm/prompt_builder.py` | Output format instructions | When LLM output structure needs changing |
+| `verification/llm/response_parser.py` | Response parsing | When LLM output format changes |
+| `verification/registry.py` | Validator mappings | When validator type needs changing |
+
+---
+
 ## Summary
 
 You now have comprehensive knowledge to:
@@ -887,7 +1266,20 @@ You now have comprehensive knowledge to:
 - Test scaffolds effectively
 - Follow project conventions
 - Contribute to the project
+- **Improve failing scaffolds using targeted strategies**
 
-**Your first task:** Create one scaffold following this guide, then test it thoroughly. This hands-on experience is the best way to learn.
+### Priority Improvement Targets
+
+Based on current verification results, these scaffolds have the most potential for improvement:
+
+| Scaffold | Current Rate | Likely Fix |
+|----------|-------------|------------|
+| quickselect | 36.4% | Better partition tracking |
+| sudoku | 27.3% | More explicit constraint checking |
+| dijkstra | 27.3% | Priority queue state tables |
+| lis | 9.1% | Clearer DP state transitions |
+| huffman | 9.1% | Step-by-step tree construction |
+
+**Your first task:** Pick one scaffold from the improvement targets, analyze its failure report, and propose specific improvements.
 
 **Questions?** Check the [FAQ](FAQ.md) or ask in project discussions.

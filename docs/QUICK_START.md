@@ -10,6 +10,29 @@ This guide gets you using algorithmic scaffolds in **10 minutes or less**. Each 
 
 ---
 
+## Start with the Best Scaffolds
+
+Based on our automated verification, these scaffolds have **100% pass rate** and are the most reliable:
+
+| Scaffold | Example # | What It Does |
+|----------|-----------|--------------|
+| **A\*** (astar) | 8 (similar to Dijkstra) | GPS-style navigation with heuristics |
+| **Merge Sort** | Not in examples | Sorting data efficiently |
+| **N-Queens** | 5 (Sudoku similar) | Placement puzzles |
+| **Subset Sum** | Not in examples | Finding combinations that sum to a target |
+| **Topological Sort** | Not in examples | Task ordering with dependencies |
+
+**Tip:** If you're new, start with Examples 1, 3, and 5 - these use highly reliable scaffolds or close variants.
+
+### Scaffold Reliability Key
+
+Throughout this guide, examples are marked:
+- **CERTIFIED** - 100% verification pass rate
+- **PARTIAL** - 50-82% pass rate, generally reliable
+- **VERIFY** - Lower pass rate, always check results manually
+
+---
+
 ## How This Guide Works
 
 Each example follows this pattern:
@@ -22,7 +45,7 @@ Each example follows this pattern:
 
 ---
 
-## Example 1: Finding the Shortest Route (BFS)
+## Example 1: Finding the Shortest Route (BFS) **[PARTIAL - 72.7%]**
 
 ### The Problem
 You're planning a trip and want to find the route with the **fewest stops** between cities.
@@ -104,7 +127,9 @@ The AI should show:
 
 ---
 
-## Example 2: Scheduling Meetings (Activity Selection)
+## Example 2: Scheduling Meetings (Activity Selection) **[VERIFY - 0%]**
+
+> **Note:** This scaffold has a low verification pass rate. The LLM often misinterprets the greedy choice. Verify results manually or try Example 1 (BFS) first for a more reliable experience.
 
 ### The Problem
 You have multiple meetings but only one conference room. Find the **maximum number of non-overlapping meetings**.
@@ -184,7 +209,7 @@ The AI should:
 
 ---
 
-## Example 3: Searching a Phonebook (Binary Search)
+## Example 3: Searching a Phonebook (Binary Search) **[PARTIAL - 72.7%]**
 
 ### The Problem
 Find a name in a sorted phonebook using **binary search** (much faster than checking every entry).
@@ -271,7 +296,9 @@ The AI should show:
 
 ---
 
-## Example 4: Packing a Suitcase (0/1 Knapsack)
+## Example 4: Packing a Suitcase (0/1 Knapsack) **[VERIFY - 0%]**
+
+> **Note:** This DP scaffold has low verification pass rate. LLMs struggle with building DP tables correctly. Verify results manually.
 
 ### The Problem
 You're packing for a trip with a **weight limit**. Each item has a weight and a value. Maximize total value without exceeding the limit.
@@ -357,7 +384,9 @@ The AI should:
 
 ---
 
-## Example 5: Solving a Mini Sudoku (Backtracking)
+## Example 5: Solving a Mini Sudoku (Backtracking) **[VERIFY - 27.3%]**
+
+> **Note:** Sudoku verification has lower pass rate due to complex constraint checking. The related **nqueens** scaffold has 100% pass rate - consider trying that for backtracking problems.
 
 ### The Problem
 Solve a 4×4 mini Sudoku puzzle using backtracking.
@@ -449,7 +478,9 @@ The AI should:
 
 ---
 
-## Example 6: Finding Square Root (Newton-Raphson)
+## Example 6: Finding Square Root (Newton-Raphson) **[VERIFY - 0%]**
+
+> **Note:** Numerical methods have low verification pass rates due to convergence and precision issues. Results may be close but not exact.
 
 ### The Problem
 Calculate the square root of 10 to 4 decimal places using Newton-Raphson method.
@@ -511,7 +542,9 @@ The AI should show iterations:
 
 ---
 
-## Example 7: Finding Longest Common Text (LCS)
+## Example 7: Finding Longest Common Text (LCS) **[VERIFY - 0%]**
+
+> **Note:** LCS verification has low pass rate. For string comparison, the **edit_distance** scaffold (54.5%) is more reliable.
 
 ### The Problem
 Find the longest sequence of characters that appears in both strings (in order, but not necessarily consecutive).
@@ -581,7 +614,9 @@ The AI should:
 
 ---
 
-## Example 8: Cheapest Flight Route (Dijkstra)
+## Example 8: Cheapest Flight Route (Dijkstra) **[VERIFY - 27.3%]**
+
+> **Note:** Dijkstra verification has lower pass rate due to priority queue management complexity. The similar **A\*** (astar) scaffold has 100% pass rate when you have a heuristic available.
 
 ### The Problem
 Find the **cheapest** flight route from NYC to LA.
@@ -668,7 +703,7 @@ The AI should find:
 
 ---
 
-## Example 9: Text Pattern Search (KMP)
+## Example 9: Text Pattern Search (KMP) **[PARTIAL - 54.5%]**
 
 ### The Problem
 Find all occurrences of "ABA" in "ABABAABABABA".
@@ -740,7 +775,9 @@ The AI should:
 
 ---
 
-## Example 10: Monte Carlo Pi Estimation
+## Example 10: Monte Carlo Pi Estimation **[VERIFY - 0%]**
+
+> **Note:** Monte Carlo verification has low pass rate due to random sampling interpretation by LLMs.
 
 ### The Problem
 Estimate the value of π using random points.
@@ -826,18 +863,30 @@ The AI should:
 
 Congratulations! You've now used scaffolds for:
 
-| Example | Algorithm | Category |
-|---------|-----------|----------|
-| 1 | BFS | Graph |
-| 2 | Activity Selection | Greedy |
-| 3 | Binary Search | Divide & Conquer |
-| 4 | 0/1 Knapsack | Dynamic Programming |
-| 5 | Sudoku | Backtracking |
-| 6 | Newton-Raphson | Numerical Methods |
-| 7 | LCS | Dynamic Programming |
-| 8 | Dijkstra | Graph |
-| 9 | KMP | String |
-| 10 | Monte Carlo | Numerical Methods |
+| Example | Algorithm | Category | Reliability |
+|---------|-----------|----------|-------------|
+| 1 | BFS | Graph | PARTIAL (72.7%) |
+| 2 | Activity Selection | Greedy | VERIFY (0%) |
+| 3 | Binary Search | Divide & Conquer | PARTIAL (72.7%) |
+| 4 | 0/1 Knapsack | Dynamic Programming | VERIFY (0%) |
+| 5 | Sudoku | Backtracking | VERIFY (27.3%) |
+| 6 | Newton-Raphson | Numerical Methods | VERIFY (0%) |
+| 7 | LCS | Dynamic Programming | VERIFY (0%) |
+| 8 | Dijkstra | Graph | VERIFY (27.3%) |
+| 9 | KMP | String | PARTIAL (54.5%) |
+| 10 | Monte Carlo | Numerical Methods | VERIFY (0%) |
+
+### Most Reliable Scaffolds Not in Examples
+
+For the best experience, also try these **100% verified** scaffolds:
+
+| Scaffold | Category | Use Case |
+|----------|----------|----------|
+| **astar** | Graph | Navigation with heuristics (like Example 8 but better) |
+| **merge_sort** | Divide & Conquer | Sorting data |
+| **nqueens** | Backtracking | Placement puzzles (like Example 5 but better) |
+| **subset_sum** | Backtracking | Finding combinations that sum to a target |
+| **topological_sort** | Graph | Task ordering with dependencies |
 
 ## Next Steps
 

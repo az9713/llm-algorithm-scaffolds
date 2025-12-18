@@ -1,0 +1,278 @@
+{
+  "scaffold": "gradient_descent",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 16471
+  },
+  "started_at": "2025-12-17T23:49:19.005043",
+  "completed_at": "2025-12-17T23:50:38.379350",
+  "results": [
+    {
+      "test_case_id": "gradient_descent_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 13271.08569999109,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 3.923188621837091e-06
+        },
+        "actual": {
+          "minimum_value": 0.2904,
+          "solution": 0.5388
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 536,
+        "output": 1970
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6177.169200003846,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 3.923188621837091e-06
+        },
+        "actual": {
+          "minimum_value": 2.7,
+          "solution": 1.6448
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 536,
+        "output": 891
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5794.493399997009,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 3.923188621837091e-06
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 0.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 536,
+        "output": 816
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6529.032799997367,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 1.0,
+          "solution": 2.999996322472498
+        },
+        "actual": {
+          "minimum_value": 1.5616,
+          "solution": 0.25616
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 544,
+        "output": 815
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7090.869100007694,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 1.0,
+          "solution": 2.999996322472498
+        },
+        "actual": {
+          "minimum_value": 1.5616,
+          "solution": 0.25616
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 544,
+        "output": 815
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5742.948500002967,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 1.0,
+          "solution": 2.999996322472498
+        },
+        "actual": {
+          "minimum_value": 1.25616,
+          "solution": 0.25616
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 544,
+        "output": 725
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6514.895700005582,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 1.0,
+          "solution": 2.999996322472498
+        },
+        "actual": {
+          "minimum_value": 1.5616,
+          "solution": 0.25616
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 544,
+        "output": 815
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7201.556899992283,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 1.0,
+          "solution": 2.999996322472498
+        },
+        "actual": {
+          "minimum_value": 1.5616,
+          "solution": 0.25616
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 544,
+        "output": 815
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7635.737500007963,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": -1.0,
+          "solution": 0.9999999225763219
+        },
+        "actual": {
+          "minimum_value": 0.0524,
+          "solution": 0.6524
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 543,
+        "output": 926
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6970.425999985309,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": -1.0,
+          "solution": 0.9999999225763219
+        },
+        "actual": {
+          "minimum_value": -1.3305,
+          "solution": 0.607
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 543,
+        "output": 963
+      }
+    },
+    {
+      "test_case_id": "gradient_descent_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6445.850799995242,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": -1.0,
+          "solution": 0.9999999225763219
+        },
+        "actual": {
+          "minimum_value": -1.3305,
+          "solution": 0.607
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 543,
+        "output": 963
+      }
+    }
+  ]
+}

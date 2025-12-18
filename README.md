@@ -30,14 +30,24 @@ We provide copy-paste templates that:
 
 ### Step 1: Choose Your Problem Type
 
-| If you need to... | Use this scaffold |
-|-------------------|-------------------|
-| Find shortest path (unweighted) | `scaffolds/01_graph/bfs.md` |
-| Find shortest path (weighted) | `scaffolds/01_graph/dijkstra.md` |
-| Search sorted data | `scaffolds/02_divide_conquer/binary_search.md` |
-| Schedule non-overlapping activities | `scaffolds/03_greedy/activity_selection.md` |
-| Solve Sudoku | `scaffolds/04_backtracking/sudoku.md` |
-| Choose items with weight limit | `scaffolds/05_dynamic_programming/knapsack_01.md` |
+**Start with these verified scaffolds for best results:**
+
+| If you need to... | Use this scaffold | Reliability |
+|-------------------|-------------------|-------------|
+| Find shortest path with heuristic | `scaffolds/01_graph/astar.md` | **CERTIFIED (100%)** |
+| Order tasks with dependencies | `scaffolds/01_graph/topological_sort.md` | **CERTIFIED (100%)** |
+| Sort data efficiently | `scaffolds/02_divide_conquer/merge_sort.md` | **CERTIFIED (100%)** |
+| Solve placement puzzles | `scaffolds/04_backtracking/nqueens.md` | **CERTIFIED (100%)** |
+| Find combinations summing to target | `scaffolds/04_backtracking/subset_sum.md` | **CERTIFIED (100%)** |
+
+**Other commonly used scaffolds:**
+
+| If you need to... | Use this scaffold | Reliability |
+|-------------------|-------------------|-------------|
+| Find shortest path (unweighted) | `scaffolds/01_graph/bfs.md` | PARTIAL (72.7%) |
+| Search sorted data | `scaffolds/02_divide_conquer/binary_search.md` | PARTIAL (72.7%) |
+| Find minimum spanning tree | `scaffolds/03_greedy/kruskal.md` | PARTIAL (81.8%) |
+| Compare string similarity | `scaffolds/05_dynamic_programming/edit_distance.md` | PARTIAL (54.5%) |
 
 ### Step 2: Copy the Scaffold
 
@@ -103,6 +113,7 @@ scaffolds/templates/
 | [Quick Start Guide](docs/QUICK_START.md) | 10 hands-on examples | **Start here!** |
 | [User Guide](docs/USER_GUIDE.md) | Complete usage instructions | Learning the system |
 | [Developer Guide](docs/DEVELOPER_GUIDE.md) | How to contribute | Adding new scaffolds |
+| [Verification Guide](docs/VERIFICATION.md) | Automated testing framework | Validating scaffolds |
 | [Glossary](docs/GLOSSARY.md) | Terms explained | Understanding concepts |
 | [FAQ](docs/FAQ.md) | Common questions | Troubleshooting |
 | [Scaffold Index](scaffolds/README.md) | All scaffolds listed | Finding scaffolds |
@@ -156,26 +167,36 @@ algorithmic_scaffolding_discover_ai/
 │
 ├── README.md                 # You are here
 ├── CLAUDE.md                 # Context for Claude Code
+├── verify.py                 # Automated verification tool
 ├── .gitignore               # Git ignore rules
 │
 ├── docs/                    # All documentation
 │   ├── QUICK_START.md      # Start here - 10 examples
 │   ├── USER_GUIDE.md       # Complete user manual
 │   ├── DEVELOPER_GUIDE.md  # Contributor guide
+│   ├── VERIFICATION.md     # Verification framework guide
 │   ├── GLOSSARY.md         # Definitions
 │   └── FAQ.md              # Common questions
 │
-└── scaffolds/               # All scaffold templates
-    ├── README.md           # Scaffold index
-    ├── templates/          # Generic templates (8 files)
-    ├── 01_graph/           # Graph algorithms (7 files)
-    ├── 02_divide_conquer/  # Divide & conquer (3 files)
-    ├── 03_greedy/          # Greedy algorithms (4 files)
-    ├── 04_backtracking/    # Backtracking (4 files)
-    ├── 05_dynamic_programming/  # DP (5 files)
-    ├── 06_optimization/    # Optimization (4 files)
-    ├── 07_string/          # String algorithms (3 files)
-    └── 08_numerical/       # Numerical methods (3 files)
+├── scaffolds/               # All scaffold templates
+│   ├── README.md           # Scaffold index
+│   ├── templates/          # Generic templates (8 files)
+│   ├── 01_graph/           # Graph algorithms (7 files)
+│   ├── 02_divide_conquer/  # Divide & conquer (3 files)
+│   ├── 03_greedy/          # Greedy algorithms (4 files)
+│   ├── 04_backtracking/    # Backtracking (4 files)
+│   ├── 05_dynamic_programming/  # DP (5 files)
+│   ├── 06_optimization/    # Optimization (4 files)
+│   ├── 07_string/          # String algorithms (3 files)
+│   └── 08_numerical/       # Numerical methods (3 files)
+│
+└── verification/            # Automated verification framework
+    ├── cli.py              # Command-line interface
+    ├── runner.py           # Test orchestrator
+    ├── reference/          # Ground truth implementations
+    ├── generators/         # Test case generators
+    ├── validators/         # Output validators
+    └── reports/            # Report generators
 ```
 
 ---
@@ -199,13 +220,68 @@ algorithmic_scaffolding_discover_ai/
 
 ---
 
+## Automated Verification
+
+Want to verify that scaffolds produce correct results? We have a fully automated verification framework.
+
+### Quick Start
+
+```bash
+# 1. Install dependencies
+pip install -r requirements-verification.txt
+
+# 2. Set your API key
+export ANTHROPIC_API_KEY=your_key_here
+
+# 3. Run verification
+python verify.py dijkstra          # Verify one scaffold
+python verify.py --category graph  # Verify a category
+python verify.py                   # Verify all 33 scaffolds
+```
+
+### What It Does
+
+The verification framework:
+1. **Generates test cases** using trusted libraries (networkx, numpy, scipy)
+2. **Sends scaffold + test** to Claude API
+3. **Parses responses** and extracts answers
+4. **Validates** against ground truth
+5. **Generates reports** with pass/fail status
+
+### Certification Status
+
+| Status | Pass Rate | Meaning |
+|--------|-----------|---------|
+| CERTIFIED | ≥90% | Scaffold works reliably |
+| PARTIAL | 50-89% | Scaffold needs improvement |
+| FAILED | <50% | Scaffold has issues |
+
+### Current Results (December 2025)
+
+| Status | Count | Scaffolds |
+|--------|-------|-----------|
+| **CERTIFIED** | 5 | astar, merge_sort, nqueens, subset_sum, topological_sort |
+| **PARTIAL** | 6 | kruskal (81.8%), bfs (72.7%), binary_search (72.7%), bellman_ford (54.5%), dfs (54.5%), edit_distance (54.5%) |
+| **FAILED** | 22 | See [VERIFICATION.md](docs/VERIFICATION.md) for details |
+
+**Recommendation:** Start with certified scaffolds for the best experience.
+
+See [Verification Guide](docs/VERIFICATION.md) for complete documentation.
+
+---
+
 ## Requirements
 
-**None!** This is a collection of text templates. You just need:
+**For using scaffolds (no technical skills needed):**
 - A text editor to read/copy the scaffolds
 - Access to an LLM (ChatGPT, Claude, Gemini, etc.)
 
 No installation, no dependencies, no programming required.
+
+**For running automated verification (optional):**
+- Python 3.9+
+- Anthropic API key
+- Dependencies: `pip install -r requirements-verification.txt`
 
 ---
 
@@ -233,6 +309,21 @@ We welcome contributions! See [Developer Guide](docs/DEVELOPER_GUIDE.md) for:
 - How to add new scaffolds
 - Style guidelines
 - Testing procedures
+- **Improving failing scaffolds** (22 scaffolds need work!)
+
+### High-Impact Contribution Areas
+
+With only 5 of 33 scaffolds achieving 100% pass rate, there's significant opportunity to improve:
+
+| Priority | Scaffold | Current Rate | Improvement Opportunity |
+|----------|----------|--------------|------------------------|
+| High | quickselect | 36.4% | Better partition state tracking |
+| High | sudoku | 27.3% | More explicit constraint checking |
+| High | dijkstra | 27.3% | Priority queue state tables |
+| Medium | lis | 9.1% | Clearer DP state transitions |
+| Medium | huffman | 9.1% | Step-by-step tree construction |
+
+See [VERIFICATION.md](docs/VERIFICATION.md) for detailed failure analysis and improvement strategies.
 
 ---
 

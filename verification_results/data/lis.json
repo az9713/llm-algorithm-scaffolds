@@ -1,0 +1,620 @@
+{
+  "scaffold": "lis",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 1,
+    "pass_rate": 0.09090909090909091,
+    "total_tokens": 16016
+  },
+  "started_at": "2025-12-17T23:46:23.016279",
+  "completed_at": "2025-12-17T23:47:40.427859",
+  "results": [
+    {
+      "test_case_id": "lis_simple_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6621.04339999496,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "length": 6,
+          "sequence": [
+            10,
+            22,
+            33,
+            41,
+            60,
+            80
+          ]
+        },
+        "actual": {
+          "length": 6,
+          "sequence": [
+            10,
+            22,
+            33,
+            41,
+            60,
+            80
+          ]
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 511,
+        "output": 984
+      }
+    },
+    {
+      "test_case_id": "lis_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7788.21820000303,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [10, 22, 33, 41, 60, 80], [10, 22, 33, 50, 60, 80])]",
+        "expected": {
+          "length": 6,
+          "sequence": [
+            10,
+            22,
+            33,
+            41,
+            60,
+            80
+          ]
+        },
+        "actual": {
+          "length": 6,
+          "sequence": [
+            10,
+            22,
+            33,
+            50,
+            60,
+            80
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                10,
+                22,
+                33,
+                41,
+                60,
+                80
+              ],
+              [
+                10,
+                22,
+                33,
+                50,
+                60,
+                80
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 511,
+        "output": 976
+      }
+    },
+    {
+      "test_case_id": "lis_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7601.451900001848,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [10, 22, 33, 41, 60, 80], [10, 22, 33, 50, 60, 80])]",
+        "expected": {
+          "length": 6,
+          "sequence": [
+            10,
+            22,
+            33,
+            41,
+            60,
+            80
+          ]
+        },
+        "actual": {
+          "length": 6,
+          "sequence": [
+            10,
+            22,
+            33,
+            50,
+            60,
+            80
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                10,
+                22,
+                33,
+                41,
+                60,
+                80
+              ],
+              [
+                10,
+                22,
+                33,
+                50,
+                60,
+                80
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 511,
+        "output": 976
+      }
+    },
+    {
+      "test_case_id": "lis_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6829.306300001917,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [4, 14, 87, 95], [4, 18, 36, 95])]",
+        "expected": {
+          "length": 4,
+          "sequence": [
+            4,
+            14,
+            87,
+            95
+          ]
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            4,
+            18,
+            36,
+            95
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                4,
+                14,
+                87,
+                95
+              ],
+              [
+                4,
+                18,
+                36,
+                95
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 931
+      }
+    },
+    {
+      "test_case_id": "lis_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7849.225800018758,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [4, 12, 28, 30, 65, 78], [70, 12, 28, 30, 65, 78])]",
+        "expected": {
+          "length": 6,
+          "sequence": [
+            4,
+            12,
+            28,
+            30,
+            65,
+            78
+          ]
+        },
+        "actual": {
+          "length": 6,
+          "sequence": [
+            70,
+            12,
+            28,
+            30,
+            65,
+            78
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                4,
+                12,
+                28,
+                30,
+                65,
+                78
+              ],
+              [
+                70,
+                12,
+                28,
+                30,
+                65,
+                78
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 1032
+      }
+    },
+    {
+      "test_case_id": "lis_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7028.416900022421,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [26, 29, 58, 76], [76, 58, 26, 1])]",
+        "expected": {
+          "length": 4,
+          "sequence": [
+            26,
+            29,
+            58,
+            76
+          ]
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            76,
+            58,
+            26,
+            1
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                26,
+                29,
+                58,
+                76
+              ],
+              [
+                76,
+                58,
+                26,
+                1
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 982
+      }
+    },
+    {
+      "test_case_id": "lis_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7229.590100003406,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [20, 28, 44], [20, 28, 98])]",
+        "expected": {
+          "length": 3,
+          "sequence": [
+            20,
+            28,
+            44
+          ]
+        },
+        "actual": {
+          "length": 3,
+          "sequence": [
+            20,
+            28,
+            98
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                20,
+                28,
+                44
+              ],
+              [
+                20,
+                28,
+                98
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 986
+      }
+    },
+    {
+      "test_case_id": "lis_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4869.451799982926,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [13, 34, 59, 69], [13, 46, 78, 94])]",
+        "expected": {
+          "length": 4,
+          "sequence": [
+            13,
+            34,
+            59,
+            69
+          ]
+        },
+        "actual": {
+          "length": 4,
+          "sequence": [
+            13,
+            46,
+            78,
+            94
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                13,
+                34,
+                59,
+                69
+              ],
+              [
+                13,
+                46,
+                78,
+                94
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 656
+      }
+    },
+    {
+      "test_case_id": "lis_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 9149.49969999725,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('length', 5, 6), ('sequence', [11, 38, 47, 74, 85], [11, 71, 74, 81, 85, 91])]",
+        "expected": {
+          "length": 5,
+          "sequence": [
+            11,
+            38,
+            47,
+            74,
+            85
+          ]
+        },
+        "actual": {
+          "length": 6,
+          "sequence": [
+            11,
+            71,
+            74,
+            81,
+            85,
+            91
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "length",
+              5,
+              6
+            ],
+            [
+              "sequence",
+              [
+                11,
+                38,
+                47,
+                74,
+                85
+              ],
+              [
+                11,
+                71,
+                74,
+                81,
+                85,
+                91
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 1091
+      }
+    },
+    {
+      "test_case_id": "lis_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5972.092300013173,
+      "validation": {
+        "is_valid": false,
+        "score": 0.5,
+        "message": "Value mismatches: [('sequence', [11, 13, 36, 59, 82], [30, 38, 49, 59, 82])]",
+        "expected": {
+          "length": 5,
+          "sequence": [
+            11,
+            13,
+            36,
+            59,
+            82
+          ]
+        },
+        "actual": {
+          "length": 5,
+          "sequence": [
+            30,
+            38,
+            49,
+            59,
+            82
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "sequence",
+              [
+                11,
+                13,
+                36,
+                59,
+                82
+              ],
+              [
+                30,
+                38,
+                49,
+                59,
+                82
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 834
+      }
+    },
+    {
+      "test_case_id": "lis_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6473.0567000224255,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('length', 4, 8), ('sequence', [27, 35, 78, 82], [10, 22, 35, 78, 82, 83, 86, 90])]",
+        "expected": {
+          "length": 4,
+          "sequence": [
+            27,
+            35,
+            78,
+            82
+          ]
+        },
+        "actual": {
+          "length": 8,
+          "sequence": [
+            10,
+            22,
+            35,
+            78,
+            82,
+            83,
+            86,
+            90
+          ]
+        },
+        "details": {
+          "mismatches": [
+            [
+              "length",
+              4,
+              8
+            ],
+            [
+              "sequence",
+              [
+                27,
+                35,
+                78,
+                82
+              ],
+              [
+                10,
+                22,
+                35,
+                78,
+                82,
+                83,
+                86,
+                90
+              ]
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 520,
+        "output": 875
+      }
+    }
+  ]
+}

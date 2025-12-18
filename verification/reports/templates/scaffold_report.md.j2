@@ -1,0 +1,41 @@
+# Scaffold Verification Report: {{ scaffold }}
+
+## Summary
+
+- **Status:** {% if pass_rate >= 90 %}CERTIFIED{% elif pass_rate >= 50 %}PARTIAL{% else %}FAILED{% endif %}
+- **Model:** {{ model }}
+- **Test Date:** {{ started_at.strftime('%Y-%m-%d %H:%M') }}
+- **Pass Rate:** {{ "%.1f"|format(pass_rate) }}% ({{ passed_tests }}/{{ total_tests }})
+- **Total Tokens:** {{ total_tokens }}
+
+## Test Results by Tier
+
+### Simple Cases
+{% for result in results_by_tier.simple %}
+- [{{ "PASS" if result.passed else "FAIL" }}] {{ result.test_case.id }}: {{ result.test_case.description }}
+{% endfor %}
+
+### Standard Cases
+{% for result in results_by_tier.standard %}
+- [{{ "PASS" if result.passed else "FAIL" }}] {{ result.test_case.id }}: {{ result.test_case.description }}
+{% endfor %}
+
+### Edge Cases
+{% for result in results_by_tier.edge %}
+- [{{ "PASS" if result.passed else "FAIL" }}] {{ result.test_case.id }}: {{ result.test_case.description }}
+{% endfor %}
+
+## Failure Analysis
+
+{% for result in results_by_tier.simple + results_by_tier.standard + results_by_tier.edge %}
+{% if not result.passed %}
+### {{ result.test_case.id }}
+- **Error:** {{ result.error or result.validation_result.message if result.validation_result else "Unknown" }}
+- **Expected:** {{ result.test_case.expected }}
+- **Actual:** {{ result.parsed_answer.answer if result.parsed_answer else "N/A" }}
+{% endif %}
+{% endfor %}
+
+---
+
+Generated with [Claude Code](https://claude.com/claude-code) on {{ generated_at }}

@@ -1,0 +1,38 @@
+# Algorithmic Scaffolding Certification Report
+
+## Executive Summary
+
+- **Date:** {{ generated_at[:10] }}
+- **Total Scaffolds:** {{ total_scaffolds }}
+- **Fully Certified:** {{ certified }}
+- **Partially Certified:** {{ partial }}
+- **Failed:** {{ failed }}
+- **Overall Pass Rate:** {{ "%.1f"|format(overall_pass_rate) }}%
+
+## Certification Matrix
+
+| Scaffold | Pass Rate | Status |
+|----------|-----------|--------|
+{% for scaffold in scaffolds %}
+| {{ scaffold.scaffold }} | {{ "%.1f"|format(scaffold.pass_rate * 100) }}% | {% if scaffold.pass_rate >= 0.9 %}CERTIFIED{% elif scaffold.pass_rate >= 0.5 %}PARTIAL{% else %}FAILED{% endif %} |
+{% endfor %}
+
+## Methodology
+
+Tests were conducted using:
+- Model: {{ scaffolds[0].model if scaffolds else "N/A" }}
+- Test cases per scaffold: {{ (total_tests / total_scaffolds)|int if total_scaffolds > 0 else 0 }}
+- Validation: Reference implementations using trusted libraries (networkx, numpy, scipy)
+
+## Recommendations
+
+{% if failed > 0 %}
+### Scaffolds Requiring Attention
+{% for scaffold in scaffolds if scaffold.pass_rate < 0.5 %}
+- **{{ scaffold.scaffold }}**: {{ "%.1f"|format(scaffold.pass_rate * 100) }}% pass rate
+{% endfor %}
+{% endif %}
+
+---
+
+Generated with [Claude Code](https://claude.com/claude-code) on {{ generated_at }}

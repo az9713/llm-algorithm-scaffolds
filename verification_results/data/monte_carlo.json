@@ -1,0 +1,267 @@
+{
+  "scaffold": "monte_carlo",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 13080
+  },
+  "started_at": "2025-12-17T23:58:58.033526",
+  "completed_at": "2025-12-17T23:59:53.544592",
+  "results": [
+    {
+      "test_case_id": "monte_carlo_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4329.146900010528,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.128,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.14
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 525
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4996.290700015379,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.228,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.1416
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 658
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5968.66109999246,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.1,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.14
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 678
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5324.831000005361,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.1396,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.1418
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 701
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5435.617000010097,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.1392,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.141592
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 718
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3890.7858000020497,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.14,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.1416
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 505
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5842.0303000020795,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.1528,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.1418
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 735
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5137.291400023969,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.1676,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.1416
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 534,
+        "output": 699
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3731.948399974499,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.2,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.16
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 533,
+        "output": 500
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5243.053200014401,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.14688,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.141592
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 535,
+        "output": 739
+      }
+    },
+    {
+      "test_case_id": "monte_carlo_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5611.204299988458,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "estimate": 3.1472,
+          "true_value": 3.141592653589793
+        },
+        "actual": {
+          "estimate": 3.1418
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 535,
+        "output": 747
+      }
+    }
+  ]
+}

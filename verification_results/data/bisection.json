@@ -1,0 +1,256 @@
+{
+  "scaffold": "bisection",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 13663
+  },
+  "started_at": "2025-12-17T23:58:01.641987",
+  "completed_at": "2025-12-17T23:58:58.010767",
+  "results": [
+    {
+      "test_case_id": "bisection_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5105.225599982077,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 678
+      }
+    },
+    {
+      "test_case_id": "bisection_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4960.3438999911305,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4937.955300003523,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4760.301100002835,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5147.10030000424,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5334.429699985776,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5675.47210000339,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4454.438599990681,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 542
+      }
+    },
+    {
+      "test_case_id": "bisection_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5406.570199993439,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5634.073399996851,
+      "validation": {
+        "is_valid": false,
+        "score": 0.985947159211138,
+        "message": "Difference 0.021379706799052656 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.5,
+        "details": {
+          "difference": 0.021379706799052656,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.014052840788862013
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 687
+      }
+    },
+    {
+      "test_case_id": "bisection_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4952.658299996983,
+      "validation": {
+        "is_valid": false,
+        "score": 0.8216226326759484,
+        "message": "Difference 0.27137970679905266 exceeds tolerance 2.5213797067990527e-06",
+        "expected": 1.5213797067990527,
+        "actual": 1.25,
+        "details": {
+          "difference": 0.27137970679905266,
+          "threshold": 2.5213797067990527e-06,
+          "relative_error": 0.17837736732405168
+        }
+      },
+      "llm_tokens": {
+        "input": 569,
+        "output": 688
+      }
+    }
+  ]
+}

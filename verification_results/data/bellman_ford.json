@@ -1,0 +1,512 @@
+{
+  "scaffold": "bellman_ford",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 6,
+    "pass_rate": 0.5454545454545454,
+    "total_tokens": 18315
+  },
+  "started_at": "2025-12-17T23:27:21.015105",
+  "completed_at": "2025-12-17T23:28:40.935075",
+  "results": [
+    {
+      "test_case_id": "bellman_ford_simple_01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 6641.957499989076,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 2,
+            "C": 3,
+            "D": 8
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 2,
+            "C": 3,
+            "D": 8
+          }
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 647,
+        "output": 959
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_simple_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5840.677700005472,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 2,
+            "D": 2,
+            "C": 12
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 2,
+            "C": 12,
+            "D": 2
+          }
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 647,
+        "output": 779
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6638.146500015864,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('distances', {'A': 0, 'B': 10, 'C': 19, 'D': 28}, {'A': 0, 'B': 10, 'C': 11, 'D': 20})]",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 10,
+            "C": 19,
+            "D": 28
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 10,
+            "C": 11,
+            "D": 20
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "distances",
+              {
+                "A": 0,
+                "B": 10,
+                "C": 19,
+                "D": 28
+              },
+              {
+                "A": 0,
+                "B": 10,
+                "C": 11,
+                "D": 20
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 647,
+        "output": 850
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 7864.445100014564,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('distances', {'A': 0, 'B': 1, 'D': 2, 'C': 3, 'E': 8, 'G': 13, 'F': 13}, {'A': 0, 'B': 1, 'C': 3, 'D': 2, 'E': 16, 'F': 21, 'G': 24})]",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 1,
+            "D": 2,
+            "C": 3,
+            "E": 8,
+            "G": 13,
+            "F": 13
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 1,
+            "C": 3,
+            "D": 2,
+            "E": 16,
+            "F": 21,
+            "G": 24
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "distances",
+              {
+                "A": 0,
+                "B": 1,
+                "D": 2,
+                "C": 3,
+                "E": 8,
+                "G": 13,
+                "F": 13
+              },
+              {
+                "A": 0,
+                "B": 1,
+                "C": 3,
+                "D": 2,
+                "E": 16,
+                "F": 21,
+                "G": 24
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 699,
+        "output": 1138
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 10892.506100004539,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('distances', {'A': 0, 'B': 1, 'F': 3, 'G': 5, 'C': 9, 'D': 18, 'E': 20}, {'A': 0, 'B': 1, 'C': 9, 'D': 18, 'E': 20, 'F': 3, 'G': 29})]",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 1,
+            "F": 3,
+            "G": 5,
+            "C": 9,
+            "D": 18,
+            "E": 20
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 1,
+            "C": 9,
+            "D": 18,
+            "E": 20,
+            "F": 3,
+            "G": 29
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "distances",
+              {
+                "A": 0,
+                "B": 1,
+                "F": 3,
+                "G": 5,
+                "C": 9,
+                "D": 18,
+                "E": 20
+              },
+              {
+                "A": 0,
+                "B": 1,
+                "C": 9,
+                "D": 18,
+                "E": 20,
+                "F": 3,
+                "G": 29
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 699,
+        "output": 1377
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_standard_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5850.278400001116,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 4,
+            "D": 5,
+            "C": 8,
+            "E": 9
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 4,
+            "C": 8,
+            "D": 5,
+            "E": 9
+          }
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 661,
+        "output": 764
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 9534.367600019323,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('distances', {'A': 0, 'B': 6, 'C': 10, 'D': 13, 'E': 15, 'F': 19, 'G': 22}, {'A': 0, 'B': 6, 'C': 10, 'D': 13, 'E': 15, 'F': 19, 'G': 28})]",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 6,
+            "C": 10,
+            "D": 13,
+            "E": 15,
+            "F": 19,
+            "G": 22
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 6,
+            "C": 10,
+            "D": 13,
+            "E": 15,
+            "F": 19,
+            "G": 28
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "distances",
+              {
+                "A": 0,
+                "B": 6,
+                "C": 10,
+                "D": 13,
+                "E": 15,
+                "F": 19,
+                "G": 22
+              },
+              {
+                "A": 0,
+                "B": 6,
+                "C": 10,
+                "D": 13,
+                "E": 15,
+                "F": 19,
+                "G": 28
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 699,
+        "output": 1403
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_standard_05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 8553.321400017012,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 6,
+            "C": 7,
+            "D": 11,
+            "E": 12,
+            "F": 18
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 6,
+            "C": 7,
+            "D": 11,
+            "E": 12,
+            "F": 18
+          }
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 685,
+        "output": 1293
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 10276.66559998761,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Value mismatches: [('distances', {'A': 0, 'B': 8, 'C': 11, 'D': 16, 'E': 19, 'F': 23, 'G': 32, 'J': 38, 'H': 41, 'I': 46}, {'A': 0, 'B': 8, 'C': 11, 'D': 16, 'E': 19, 'F': 23, 'G': 32, 'H': 41, 'I': 46, 'J': 56})]",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 8,
+            "C": 11,
+            "D": 16,
+            "E": 19,
+            "F": 23,
+            "G": 32,
+            "J": 38,
+            "H": 41,
+            "I": 46
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 8,
+            "C": 11,
+            "D": 16,
+            "E": 19,
+            "F": 23,
+            "G": 32,
+            "H": 41,
+            "I": 46,
+            "J": 56
+          }
+        },
+        "details": {
+          "mismatches": [
+            [
+              "distances",
+              {
+                "A": 0,
+                "B": 8,
+                "C": 11,
+                "D": 16,
+                "E": 19,
+                "F": 23,
+                "G": 32,
+                "J": 38,
+                "H": 41,
+                "I": 46
+              },
+              {
+                "A": 0,
+                "B": 8,
+                "C": 11,
+                "D": 16,
+                "E": 19,
+                "F": 23,
+                "G": 32,
+                "H": 41,
+                "I": 46,
+                "J": 56
+              }
+            ]
+          ]
+        }
+      },
+      "llm_tokens": {
+        "input": 761,
+        "output": 1370
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_edge_02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 5131.315000005998,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "distances": {
+            "A": 0,
+            "B": 10
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0,
+            "B": 10
+          }
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 609,
+        "output": 704
+      }
+    },
+    {
+      "test_case_id": "bellman_ford_edge_03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 2696.075399988331,
+      "validation": {
+        "is_valid": true,
+        "score": 1.0,
+        "message": "",
+        "expected": {
+          "distances": {
+            "A": 0
+          }
+        },
+        "actual": {
+          "distances": {
+            "A": 0
+          }
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 586,
+        "output": 338
+      }
+    }
+  ]
+}

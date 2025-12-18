@@ -67,6 +67,15 @@ A rule or limitation that a solution must satisfy.
 
 **Example:** In scheduling, a constraint might be "no two meetings can overlap."
 
+### Certification Status
+The result of automated verification testing. Indicates scaffold reliability.
+
+| Status | Pass Rate | Meaning |
+|--------|-----------|---------|
+| CERTIFIED | ≥90% | Scaffold works reliably |
+| PARTIAL | 50-89% | Scaffold has some issues |
+| FAILED | <50% | Scaffold needs work |
+
 ### Convergence
 When an iterative algorithm's results approach a stable final value.
 
@@ -142,6 +151,9 @@ A data structure consisting of nodes (vertices) connected by edges.
 - **Directed graph:** Edges have direction (one-way streets)
 - **Undirected graph:** Edges go both ways (two-way streets)
 - **Weighted graph:** Edges have costs/distances
+
+### Ground Truth
+The correct, verified answer used as a reference in testing. In the verification framework, ground truth comes from trusted libraries like networkx, numpy, and scipy.
 
 ### Greedy Algorithm
 An algorithm that makes the locally optimal choice at each step, hoping to find a global optimum.
@@ -312,6 +324,9 @@ A mathematical formula that defines a value in terms of smaller instances.
 
 **Example:** fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
 
+### Reference Implementation
+A trusted, verified implementation of an algorithm used as ground truth for testing. In the verification framework, reference implementations use libraries like networkx for graph algorithms.
+
 ### Recursion
 A technique where a function calls itself with smaller inputs until reaching a base case.
 
@@ -354,6 +369,14 @@ All the information needed to describe the current situation in an algorithm.
 ### Tabulation
 Building a DP solution bottom-up by filling a table. Opposite of memoization (top-down).
 
+### Test Case
+A specific input with a known expected output, used to verify algorithm correctness.
+
+**Tiers in verification:**
+- **Simple**: Basic functionality (3 cases)
+- **Standard**: Normal complexity (5 cases)
+- **Edge**: Boundary conditions (3 cases)
+
 ### Termination Condition
 The rule that determines when an algorithm should stop.
 
@@ -383,6 +406,23 @@ Checking that a solution is correct after finding it.
 - Trace through the solution
 - Check all constraints
 - Compare with known values
+
+### Verification Framework
+An automated testing system that validates scaffolds by:
+1. Generating test cases with known correct answers
+2. Running scaffolds through LLMs
+3. Comparing outputs against ground truth
+
+See [Verification Guide](VERIFICATION.md).
+
+### Validator
+A component that compares LLM output against expected output.
+
+**Types:**
+- **Exact Match**: Values must be identical
+- **Numeric Tolerance**: Floats within epsilon
+- **Set Equivalence**: Same elements, any order
+- **MST Validator**: Special handling for spanning trees
 
 ### Visited Set
 A set that tracks which nodes have been processed, preventing infinite loops in graph traversal.

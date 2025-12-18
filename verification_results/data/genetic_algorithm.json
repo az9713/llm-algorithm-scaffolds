@@ -1,0 +1,284 @@
+{
+  "scaffold": "genetic_algorithm",
+  "model": "claude-3-haiku-20240307",
+  "summary": {
+    "total_tests": 11,
+    "passed_tests": 0,
+    "pass_rate": 0.0,
+    "total_tokens": 14054
+  },
+  "started_at": "2025-12-17T23:51:42.081708",
+  "completed_at": "2025-12-17T23:52:37.245251",
+  "results": [
+    {
+      "test_case_id": "genetic_algorithm_simple_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 3995.2682000002824,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Failed to parse LLM response: Could not extract optimization result from response",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 0.0003476241208385158
+        },
+        "actual": null,
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 612,
+        "output": 509
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_simple_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4285.379699984333,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 1.2193034936651247e-14
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 0.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 612,
+        "output": 611
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_simple_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6804.9662000266835,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": -3.2024176482090406e-06
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 0.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 612,
+        "output": 872
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_standard_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4759.574900002917,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 2.9999999999997486
+        },
+        "actual": {
+          "minimum_value": -9.0,
+          "solution": 3.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 616,
+        "output": 700
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_standard_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4101.617599983001,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 2.9956141244011047
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 3.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 616,
+        "output": 544
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_standard_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 6172.536400001263,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 3.0000633763280473
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 3.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 616,
+        "output": 742
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_standard_04",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5166.83020000346,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 3.000481132313607
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 3.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 616,
+        "output": 732
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_standard_05",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5877.939500001958,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": 2.999955319056233
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 3.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 616,
+        "output": 751
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_edge_01",
+      "passed": false,
+      "error": null,
+      "duration_ms": 5185.266800021054,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": [
+            0.0015791617956080204,
+            0.006510360659947903
+          ]
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": 1.0
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 627,
+        "output": 682
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_edge_02",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4281.386099988595,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": [
+            6.585142997765017e-05,
+            1.902891222500141e-05
+          ]
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": null
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 627,
+        "output": 565
+      }
+    },
+    {
+      "test_case_id": "genetic_algorithm_edge_03",
+      "passed": false,
+      "error": null,
+      "duration_ms": 4532.527300005313,
+      "validation": {
+        "is_valid": false,
+        "score": 0.0,
+        "message": "Cannot convert to float: float() argument must be a string or a real number, not 'dict'",
+        "expected": {
+          "minimum_value": 0.0,
+          "solution": [
+            -0.0037777351771264124,
+            0.0013311689078037482
+          ]
+        },
+        "actual": {
+          "minimum_value": 0.0,
+          "solution": null
+        },
+        "details": {}
+      },
+      "llm_tokens": {
+        "input": 627,
+        "output": 549
+      }
+    }
+  ]
+}
